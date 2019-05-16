@@ -1,0 +1,33 @@
+{
+    "name": "coordicide-website",
+    "version": "1.0.0",
+    "private": true,
+    "engines": {
+        "node": ">=8 <9"
+    },
+    "main": "index.js",
+    "scripts": {
+        "dev": "node server.js",
+        "build": "next build",
+        "now-build": "next build",
+        "start": "NODE_ENV=production node server.js"
+    },
+    "license": "ISC",
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.18",
+        "@fortawesome/free-solid-svg-icons": "^5.8.2",
+        "@fortawesome/react-fontawesome": "^0.1.4",
+        "@zeit/next-sass": "^1.0.1",
+        "axios": "^0.18.0",
+        "bootstrap": "^4.3.1",
+        "classnames": "^2.2.6",
+        "markdown-in-js": "^1.1.4",
+        "next": "^8.1.0",
+        "next-fonts": "^0.17.0",
+        "next-images": "^1.1.1",
+        "node-sass": "^4.11.0",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-recaptcha": "^2.3.10"
+    }
+}
