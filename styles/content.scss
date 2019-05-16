@@ -210,31 +210,6 @@
     }
 }
 
-.contact-form-shapes-wrapper {
-    position: relative;
-    margin: 250px 0;
-
-    .background-left {
-        position: absolute;
-        left: -250px;
-        top: -220px;
-
-        @media (max-width: 768px) {
-            display: none;
-        }
-    }
-
-    .background-right {
-        position: absolute;
-        right: -250px;
-        bottom: 70px;
-
-        @media (max-width: 768px) {
-            display: none;
-        }
-    }
-}
-
 .left-shape {
     position: absolute;
     left: -750px;
