@@ -1,0 +1,300 @@
+@import '../styles/colors';
+@import '../styles/fade-in';
+@import '../styles/slide-up';
+@import '../styles/slide-down';
+@import '../node_modules/bootstrap/scss/bootstrap-grid';
+
+@font-face {
+    font-family: 'Camphor Pro';
+    src: url('../fonts/CamphorPro-Light.ttf');
+    font-weight: 200;
+  }
+  @font-face {
+    font-family: 'Camphor Pro';
+    src: url('../fonts/CamphorPro-Regular.ttf');
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'Camphor Pro';
+    src: url('../fonts/CamphorPro-Bold.ttf');
+    font-weight: 600;
+  }
+  @font-face {
+    font-family: 'Camphor Pro';
+    src: url('../fonts/CamphorPro-Heavy.ttf');
+    font-weight: 800;
+  }
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    font-family: 'Camphor Pro', 'Nunito Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+} 
+
+body,
+html {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Camphor Pro', 'Nunito Sans', sans-serif;
+    color: $text-main;
+    box-sizing: content-box;
+    background-color: rgb(252, 252, 252);
+}
+button {
+    border: none;
+    padding: 0;
+    outline: none;
+    outline-color: initial;
+    outline-style: none;
+    outline-width: initial;
+    cursor: pointer;
+}
+
+* {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+.container {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+#__next {
+    height: 100%;
+    width: 100%;
+}
+
+$hero-height: calc(100% - 174px);
+
+#canvas {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    animation: fade-in 1s;
+}
+
+.hero {
+    height: $hero-height;
+    position: relative;
+    animation: fade-in 3s;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.content-intro {
+    position: absolute;
+    width: 800px;
+    top: 50%;
+    left: 50%;
+    margin-left: -400px;
+    margin-top: -80px;
+    font-size: 30px;
+    line-height: 1.8;
+    letter-spacing: 2px;
+}
+
+.content-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    max-width: 880px;
+    margin: auto;
+    margin: 30px auto;
+}
+
+.normal-row {
+    flex-direction: row !important;
+}
+
+.content a,
+.content-footer a {
+    color: $text-light;
+    text-decoration: none;
+}
+
+.content-footer a {
+    color: $text-light;
+    font-size: 1.4em;
+    font-weight: 700;
+    z-index: 1000;
+}
+
+.content-footer a div {
+    padding: 20px 40px;
+}
+
+.content-previous-link {
+    & > svg {
+        color: #00ABA2;
+        font-size: 4.7em;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    height: 0;
+    padding-bottom: 40%;
+}
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 450px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 812px) {
+    .content {
+        padding: 80px 40px 20px !important;
+    }
+
+    #canvas {
+        overflow: hidden;
+    }
+
+    .hero {
+        margin-top: 180px;
+        height: calc(100% - 90px);
+        max-height: 400px;
+    }
+
+    .content-footer {
+        margin: 0 auto 80px auto;
+    }
+
+    .content-footer a {
+        font-size: 16px;
+        margin: auto;
+    }
+
+    .content-intro {
+        width: 90%;
+        left: 5%;
+        top: 100px;
+        margin-left: 0;
+        position: relative;
+        text-align: center;
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,163 @@
+@import '../styles/colors';
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+    width: 550px;
+    border-radius: 30px;
+    background-color: #fff;
+    padding: 3em 2em;
+    text-align: center;
+    margin: auto;
+    z-index: 3;
+    position: relative;
+    // box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.35);
+  
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
+    .form-heading {
+        text-transform: uppercase;
+        font-size: 26px;
+        line-height: 30px;
+        letter-spacing: 0.15em;
+        text-align: left;
+        color: #596071;
+        margin: 15px 40px;
+        max-width: 350px;
+    }
+
+    .recaptcha-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .bottom {
+        position: absolute;
+        height: 50px;
+    }
+
+    .form {
+        width: 100%;
+        z-index: 3;
+    }
+
+    .checkbox-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-top: 13px;
+        margin-left: 20px;
+    }
+
+    .checkbox {
+        margin: 10px 10px 0 5px;
+        outline: none;
+    }
+
+    .label {
+        font-family: 'Camphor Pro', 'Nunito Sans', sans-serif;
+        font-size: 12px;
+        font-weight: normal;
+        font-style: italic;
+        font-stretch: normal;
+        line-height: 12px;
+        letter-spacing: normal;
+        text-align: left;
+        color: #727E97;
+        margin-bottom: 5px;
+
+        a {
+            color: $teal;
+            text-decoration: none;
+
+            &:visited {
+                color: $teal;
+            }
+        }
+    }
+
+    .input {
+        font-family: 'Camphor Pro', 'Nunito Sans', sans-serif;
+        background: #F1F2F5;
+        color: #727E97;
+        border: none;
+        padding: 15px 25px;
+        margin: 20px 0 0;
+        width: 100%;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0.05em;
+        font-weight: normal;
+        outline: none;
+        max-width: 460px;
+        width: 100%;
+    }
+
+    .textarea {
+        font-family: 'Camphor Pro', 'Nunito Sans', sans-serif;
+        color: #727E97;
+        height: 155px;
+        max-width: 460px;
+        width: 100%;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0.05em;
+        padding: 15px 25px;
+        margin: 20px 0 0;
+        border: none;
+        background: #F1F2F5;
+        border: none;
+        outline: none;
+        resize: none;
+    }
+
+    .control-wrapper {
+        width: 100%;
+        margin-top: 40px;
+
+        @media (max-width: 980px) {
+          padding: 0 20px;
+        }
+    }
+
+    .input-form-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .column-form-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0px 20px;
+      
+        @media (max-width: 768px) {
+          margin: 0;
+          padding: 0 20px;
+        }
+    }
+
+    .error-wrapper {
+        width: 100%;
+        max-width: 1440px;
+        padding: 0 15px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 60px;
+    }
+
+    .error {
+        padding: 15px 0 0px;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.84px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #fba471ff;
+        @media (max-width: 760px) {
+          margin-bottom: 40px;
+        }
+    }
+}
