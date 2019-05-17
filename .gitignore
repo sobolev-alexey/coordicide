@@ -14,5 +14,5 @@ node_modules/
 */**/.DS_Store
 
 
-components/Content.js
+components/Content.js 
 static/

@@ -63,4 +63,22 @@
             background-color: #C583FF;
           }
     }
+
+    &.content-title {
+        font-size: 56px;
+        font-weight: 800;
+        line-height: 67px;
+        letter-spacing: 0.15em;
+        color: #50545F;
+    }
+
+    &.content-subtitle {
+        font-size: 28px;
+        font-weight: 800;
+        line-height: 32px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        text-align: left;
+        color: #596071;
+    }
 }
