@@ -1,31 +1,37 @@
 import Link from 'next/link'
 import React from 'react'
+import Button from './Button'
 
 import '../styles/menu.scss'
 
-const MenuLinks = ({ pages }) => (
-    <div className="menu-links">
-        {pages.map(page => (
-            <Link prefetch href={page.url} key={page.title}>
-                <a className="menu-link">
-                    {page.title}
-                </a>
-            </Link>
-        ))}
-    </div>
-)
-
-const Menu = ({ pages }) => (
+export default ({ onClick }) => (
     <div className="menu">
         <div className="menu-logo">
-            <Link href={pages[0].url} key={pages[0].title}>
-                <a><img src="/static/iota_logo.svg" /></a>
+            <Link prefetch href="/">
+                <img src="/static/iota_logo.svg" />
             </Link>
         </div>
 
-        <MenuLinks pages={pages} />
+        <div className="menu-links">
+            <Link prefetch href="/">
+                <a className="menu-link">
+                    Introduction
+                </a>
+            </Link>
+            <a 
+                className="btn mini menu-link"
+                download
+                href="https://github.com/iotaledger/data-marketplace/raw/develop/Blueprint%20-%20Data%20Marketplace.pdf"
+            >
+                Whitepaper
+            </a>
+            <Button
+                icon="menu"
+                className="menu-link contents"
+                onClick={onClick}
+            >
+                Contents
+            </Button>
+        </div>
     </div>
 )
-
-export default Menu
-export { MenuLinks }

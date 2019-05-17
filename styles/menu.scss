@@ -11,6 +11,8 @@
 
     div {
         height: 100%;
+        display: flex;
+        align-items: center;
     }
 
     img {
@@ -20,15 +22,13 @@
 }
 
 .menu-logo {
-    margin-top: 20px;
-    width: 56px;
-    height: 56px;
     z-index: 5000;
-}
 
-.menu-logo img {
-    width: 56px;
-    height: 56px;
+    & > img {
+        width: 56px;
+        height: 56px;
+        cursor: pointer;
+    }
 }
 
 .menu-links {
@@ -59,5 +59,22 @@
     &:last-child {
         color: #fff;
         background: #22B1AB;
+    }
+
+    &.contents {
+        margin-left: 20px;
+
+        svg {
+            margin-right: 20px;
+            font-size: 25px;
+        }
+    }
+
+    &.mini {
+        color: #22B1AB;
+        border: 2px solid rgba(34, 177, 171, 0.6);
+        border-radius: 10px;
+        height: 41px;
+        margin: 0 30px;
     }
 }

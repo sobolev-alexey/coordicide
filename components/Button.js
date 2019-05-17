@@ -2,6 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBook, faSearch, faHexagon, faPaperPlane } from '@fortawesome/pro-light-svg-icons'
+import { faBars } from '@fortawesome/pro-solid-svg-icons'
 
 import '../styles/button.scss'
 
@@ -22,6 +23,9 @@ export default ({ className, onClick, children, icon, type }) => (
         }
         {
             icon && icon === 'send' ? <FontAwesomeIcon icon={faPaperPlane} /> : null
+        }
+        {
+            icon && icon === 'menu' ? <FontAwesomeIcon icon={faBars} /> : null
         }
         {children}
     </button>

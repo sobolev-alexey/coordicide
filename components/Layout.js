@@ -5,7 +5,7 @@ import Router from 'next/router'
 import * as gtag from '../lib/gtag'
 import ExternalMenu from './ExternalMenu'
 import Shape from './Shape';
-import { default as Menu, MenuLinks } from './Menu'
+import Menu from './Menu'
 import '../styles/layout.scss'
 
 Router.onRouteChangeComplete = url => {
@@ -21,15 +21,9 @@ const externalPages = [
     { url: 'https://ecosystem.iota.org', title: 'ecosystem' }
 ]
 
-const pages = [
-    { url: '/', title: 'intro' },
-    { url: '/chapters', title: 'chapters' },
-    { url: '/whitepaper', title: 'whitepaper' }
-]
-
 const showNav = () => {
+    console.log('showNav')
     const navEl = document.getElementById('nav')
-    navEl.style.display = 'flex'
     navEl.className = 'nav-open'
 }
 
@@ -37,7 +31,6 @@ const closeNav = () => {
     const navEl = document.getElementById('nav')
     navEl.classList.add('nav-closing')
     setTimeout(() => {
-        navEl.style.display = 'none'
         navEl.className = 'nav'
     }, 1000)
 }
@@ -53,7 +46,9 @@ export default ({ children, title = defaultTitle }) => (
             />
         </Head>
 
-        <img className="mobile-logo" src="/static/iota_logo.svg" />
+        <Link prefetch href="/">
+            <img className="mobile-logo" src="/static/iota_logo.svg" />
+        </Link>
 
         <div className="show-nav" onClick={showNav} />
         <div className="nav" id="nav">
@@ -65,7 +60,7 @@ export default ({ children, title = defaultTitle }) => (
                 Link={Link}
             />
 
-            <Menu pages={pages} />
+            <Menu onClick={showNav} />
         </div>
 
         {children}

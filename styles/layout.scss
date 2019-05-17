@@ -68,6 +68,7 @@
         left: 40px;
         height: 40px;
         width: 40px;
+        cursor: pointer;
     }
 
     .footer-iota-logo {
@@ -102,7 +103,7 @@
             z-index: 10000;
             background: $text-light;
             // background: linear-gradient(150deg, $q-purple -60%, $q-darkpurple) no-repeat 50% 55%;
-            display: none;
+            display: flex;
             animation: fade-in 0.4s;
             flex-direction: column;
             justify-content: space-around;
@@ -138,12 +139,12 @@
 
         .menu-logo {
             position: absolute;
-            top: 0px;
-            left: 10px;
-            margin: auto;
+            top: 22px;
+            left: 40px;
             height: 40px;
             width: 40px;
-            padding: 0 30px;
+            margin: auto;
+            cursor: pointer;
 
             img {
                 height: 40px;
