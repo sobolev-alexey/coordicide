@@ -82,7 +82,5 @@ export default ({ children, title = defaultTitle }) => (
             </p>
             <Shape className="footer-shape" color="rgba(108, 228, 222, 0.2)" width="393px" height="416px" />
         </footer>
-        <Shape className="right-shape" color="rgba(232, 242, 248, 0.3)" width="1000px" height="1020px" />
-
     </div>
 )

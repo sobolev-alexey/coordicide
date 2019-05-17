@@ -210,22 +210,25 @@
     }
 }
 
-.left-shape {
-    position: absolute;
-    left: -750px;
-    top: 230%;
-
-    @media (max-width: 768px) {
-        display: none;
+.intro-page {
+    .left-shape {
+        position: absolute;
+        left: -750px;
+        top: 230%;
+    
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+    
+    .right-shape {
+        position: absolute;
+        right: -750px;
+        top: 270%;
+    
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 }
 
-.right-shape {
-    position: absolute;
-    right: -750px;
-    top: 270%;
-
-    @media (max-width: 768px) {
-        display: none;
-    }
-}
