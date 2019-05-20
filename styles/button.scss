@@ -12,7 +12,7 @@
 
     &.large {
         font-size: 26px;
-        font-weight: 600;
+        font-weight: 800;
         line-height: 26px;
         border-radius: 15px;
         padding: 25px 30px 22px;
@@ -61,8 +61,8 @@
 
     &.primary {
         border: none;
-        color: $teal;
-        background: rgba(108, 228, 222, 0.6);
+        color: #EBFFFE;
+        background: #22B1AB;
     
         &:hover {
             opacity: 0.7;

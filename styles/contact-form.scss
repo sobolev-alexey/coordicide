@@ -164,7 +164,7 @@
 
 .contact-form-shapes-wrapper {
     position: relative;
-    margin: 350px 0 50px;
+    margin: 350px 0 300px;
 
     .contact-form-left {
         position: absolute;
@@ -178,8 +178,8 @@
 
     .contact-form-right {
         position: absolute;
-        right: -250px;
-        bottom: 70px;
+        right: -200px;
+        bottom: -170px;
 
         @media (max-width: 768px) {
             display: none;
