@@ -1,15 +1,10 @@
-import Layout from '../components/Layout'
-import { Conclusion } from '../components/Content'
-import PreviousChapter from '../components/PreviousChapter'
+import { Content } from '../components/Content'
+import ContentPage from '../components/ContentPage'
 import '../styles/content-page.scss'
 
 export default () => (
-    <Layout>
-        <div className="content">
-            <Conclusion />
-        </div>
-        <div className="content-footer">
-            <PreviousChapter page="future" />
-        </div>
-    </Layout>
+    <ContentPage
+        prev={Content[10]}
+        page={Content[11]}
+    />
 )

@@ -1,17 +1,11 @@
-import Layout from '../components/Layout'
-import { PostCoordinator } from '../components/Content'
-import PreviousChapter from '../components/PreviousChapter'
-import NextChapter from '../components/NextChapter'
+import { Content } from '../components/Content'
+import ContentPage from '../components/ContentPage'
 import '../styles/content-page.scss'
 
 export default () => (
-    <Layout>
-        <div className="content">
-            <PostCoordinator />
-        </div>
-        <div className="content-footer">
-            <NextChapter page="modularity" chapterNumber={3} />
-            <PreviousChapter page="scalability" />
-        </div>
-    </Layout>
+    <ContentPage
+        prev={Content[1]}
+        page={Content[2]}
+        next={Content[3]}
+    />
 )

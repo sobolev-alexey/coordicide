@@ -1,17 +1,11 @@
-import Layout from '../components/Layout'
-import { Modules } from '../components/Content'
-import PreviousChapter from '../components/PreviousChapter'
-import NextChapter from '../components/NextChapter'
+import { Content } from '../components/Content'
+import ContentPage from '../components/ContentPage'
 import '../styles/content-page.scss'
 
 export default () => (
-    <Layout>
-        <div className="content">
-            <Modules />
-        </div>
-        <div className="content-footer">
-            <NextChapter page="future" chapterNumber={5} />
-            <PreviousChapter page="modularity" />
-        </div>
-    </Layout>
+    <ContentPage
+        prev={Content[3]}
+        page={Content[4]}
+        next={Content[5]}
+    />
 )

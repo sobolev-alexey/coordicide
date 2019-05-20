@@ -4,8 +4,8 @@ import '../styles/content-page.scss'
 
 export default () => (
     <ContentPage
-        prev={Content[2]}
-        page={Content[3]}
-        next={Content[4]}
+        prev={Content[5]}
+        page={Content[6]}
+        next={Content[7]}
     />
 )
