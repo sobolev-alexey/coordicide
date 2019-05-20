@@ -1,12 +1,17 @@
 import React from 'react'
 import RoundIcon from './RoundIcon'
 import Text from './Text'
+import Shape from './Shape';
 
 import '../styles/content.scss'
 
 export default () => (
     <div className="benefits-wrapper">
-        <Text className="subtitle">IOTA's benefits</Text>
+        <div className="benefits-heading-wrapper">
+            <Shape className="benefits-shape" color="#ffffff" width="193px" height="226px" />
+            <Text className="title extra-large">Benefits</Text>
+            <Text className="subtitle">of IOTA</Text>
+        </div>
         <div className="key-topic-wrapper">
             <div className="key-topic">
                 {/* <img src="../static/benefits/Feeless.svg" /> */}
