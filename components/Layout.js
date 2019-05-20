@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import Link from 'next/link'
 import Head from 'next/head'
 import Router from 'next/router'
@@ -6,6 +7,7 @@ import * as gtag from '../lib/gtag'
 import ExternalMenu from './ExternalMenu'
 import Shape from './Shape';
 import Menu from './Menu'
+import Chapters from './Chapters'
 import '../styles/layout.scss'
 
 Router.onRouteChangeComplete = url => {
@@ -21,61 +23,62 @@ const externalPages = [
     { url: 'https://ecosystem.iota.org', title: 'ecosystem' }
 ]
 
-const showNav = () => {
-    console.log('showNav')
-    const navEl = document.getElementById('nav')
-    navEl.className = 'nav-open'
-}
+export default ({ children, title = defaultTitle }) => {
+    const [showOverlay, toggleShowOverlay] = useState(false);
 
-const closeNav = () => {
-    const navEl = document.getElementById('nav')
-    navEl.classList.add('nav-closing')
-    setTimeout(() => {
-        navEl.className = 'nav'
-    }, 1000)
-}
+    function showNav() {
+        console.log('showNav')
+        toggleShowOverlay(true)
+    }
+    
+    function closeNav() {
+        toggleShowOverlay(false)
+    }
 
-export default ({ children, title = defaultTitle }) => (
-    <div className="page">
-        <Head>
-            <title>{title}</title>
-            <meta charSet="utf-8" />
-            <meta
-                name="viewport"
-                content="initial-scale=1.0, width=device-width"
-            />
-        </Head>
+    return (
+        <div className="page">
+            <Head>
+                <title>{title}</title>
+                <meta charSet="utf-8" />
+                <meta
+                    name="viewport"
+                    content="initial-scale=1.0, width=device-width"
+                />
+            </Head>
 
-        <Link prefetch href="/">
-            <img className="mobile-logo" src="/static/iota_logo.svg" />
-        </Link>
+            <Link prefetch href="/">
+                <img className="mobile-logo" src="/static/iota_logo.svg" />
+            </Link>
 
-        <div className="show-nav" onClick={showNav} />
-        <div className="nav" id="nav">
-            <div className="close-nav" onClick={closeNav} />
+            <div className="show-nav" onClick={showNav} />
+            <div className="nav" id="nav">
+                <div className="close-nav" onClick={closeNav} />
 
-            <ExternalMenu
-                className="nav-external"
-                pages={externalPages}
-                Link={Link}
-            />
+                <ExternalMenu
+                    className="nav-external"
+                    pages={externalPages}
+                    Link={Link}
+                />
 
-            <Menu onClick={showNav} />
+                <Menu onClick={showNav} />
+            </div>
+
+            {
+                showOverlay ? <Chapters /> : children
+            }
+
+            <footer>
+                <img className="footer-iota-logo" src="/static/iota_logo.svg" />
+
+                <p>Coordicide</p>
+                <p>
+                    Powered by{' '}
+                    <a href="https://iota.org" target="_blank">
+                        IOTA
+                    </a>
+                </p>
+                <Shape className="footer-shape" color="rgba(108, 228, 222, 0.2)" width="393px" height="416px" />
+            </footer>
         </div>
-
-        {children}
-
-         <footer>
-            <img className="footer-iota-logo" src="/static/iota_logo.svg" />
-
-            <p>Coordicide</p>
-            <p>
-                Powered by{' '}
-                <a href="https://iota.org" target="_blank">
-                    IOTA
-                </a>
-            </p>
-            <Shape className="footer-shape" color="rgba(108, 228, 222, 0.2)" width="393px" height="416px" />
-        </footer>
-    </div>
-)
+    )
+}

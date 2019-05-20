@@ -15,7 +15,7 @@ export default () => (
             <Text className="subtitle">Removing the coordinator</Text>
         </div>
         <Text className="subtitle">Our goal</Text>
-        <Text>At the IOTA Foundation, we are preparing to take the most significant step to date in the maturity of the protocol. This step in effect realizes the dream of a permissionless and scalable distributed ledger technology (DLT). We refer to this event as Coordicide -- the death of the Coordinator.</Text>
+        <Text>At the IOTA Foundation, we are preparing to take the most significant step to date in the maturity of the protocol. This step in effect realizes the dream of a permissionless and scalable distributed ledger technology (DLT). We refer to this event as Coordicide -- <strong>the death of the Coordinator.</strong></Text>
         <div className="intro-buttons-wrapper">
             <Link prefetch href="/intro">
                 <Button

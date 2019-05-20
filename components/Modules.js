@@ -10,6 +10,7 @@ export default () => (
         <div className="modules-heading-wrapper">
             <Shape className="modules-shape" color="rgba(232, 242, 248, 0.4)" width="193px" height="226px" />
             <Text className="title extra-large">BUILDING BLOCKS</Text>
+            <Text className="subtitle">of IOTA</Text>
         </div>
         <div className="module">
             <img src="/static/modules/NodeIdentities.png" />
