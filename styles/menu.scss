@@ -9,7 +9,7 @@
     background: linear-gradient(269.64deg, rgba(255, 255, 255, 0.8) 0.06%, rgba(255, 255, 255, 0) 100%);
     -webkit-font-smoothing: antialiased;
 
-    div {
+    & > div {
         height: 100%;
         display: flex;
         align-items: center;

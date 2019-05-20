@@ -33,30 +33,30 @@ export default ({ page, next = {}, prev = {} }) => {
     }
 
     return (
-    <Layout>
-        <div className="content-header">
-            {
-                page.title && <Text className="title extra-large">{page.title}</Text>
-            }
-            {
-                page.subtitle && <Text className="subtitle">{page.subtitle}</Text>
-            }
-        </div>
-        <div className="content">
-            <div className="content">{getContent(page.link)}</div>
-        </div>
-        <div className="content-footer">
-            {
-                next && next.title ? (
-                    <NextPage page={next.link} title={next.title} />
-                ) : null
-            }
-            {
-                prev && prev.title ? (
-                    <PreviousPage page={prev.link} title={prev.title} />
-                ) : null
-            }
-        </div>
-    </Layout>
-)
+        <Layout>
+            <div className="content-header">
+                {
+                    page.title && <Text className="title extra-large">{page.title}</Text>
+                }
+                {
+                    page.subtitle && <Text className="subtitle">{page.subtitle}</Text>
+                }
+            </div>
+            <div className="content">
+                <div className="content">{getContent(page.link)}</div>
+            </div>
+            <div className="content-footer">
+                {
+                    next && next.title ? (
+                        <NextPage page={next.link} title={next.title} />
+                    ) : null
+                }
+                {
+                    prev && prev.title ? (
+                        <PreviousPage page={prev.link} title={prev.title} />
+                    ) : null
+                }
+            </div>
+        </Layout>
+    )
 }
