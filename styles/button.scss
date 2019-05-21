@@ -17,12 +17,9 @@
         border-radius: 15px;
         padding: 25px 30px 22px;
         width: 310px;
-        text-align: right;
-
-        & > svg {
-            position: absolute;
-            left: 30px;
-        }
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     &.medium {

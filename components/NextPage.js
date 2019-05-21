@@ -5,7 +5,7 @@ import Button from './Button'
 export default ({ page, title }) => (
     <Link prefetch href={`/${page}`}>
         <Button  icon="next" className="large primary">
-            {title}
+            <span>{title}</span>
         </Button>
     </Link>
 )

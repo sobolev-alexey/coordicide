@@ -209,6 +209,15 @@ $hero-height: calc(100% - 174px);
     max-width: 880px;
     margin: auto;
     margin: 30px auto;
+
+    & > .btn {
+        max-width: 225px;
+
+        &.secondary {
+            text-align: center;
+            display: inline;
+        }
+    }
 }
 
 .normal-row {
@@ -249,8 +258,8 @@ $hero-height: calc(100% - 174px);
     width: 100%;
     max-width: 800px;
     margin: auto;
-    height: 0;
-    padding-bottom: 40%;
+    height: 580px;
+    top: 50px;
 }
 .video {
     position: absolute;
