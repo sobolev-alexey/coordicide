@@ -1,0 +1,64 @@
+.play-button-wrapper {
+    position: absolute;
+    z-index: -1;
+}
+
+@keyframes shadow-pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.7);
+        opacity: 0;
+    }
+}
+
+@keyframes border-pulse {
+    0% {
+        fill: #D4F6F4;
+        stroke: #D4F6F4;
+    }
+
+    30% {
+        fill: #7CE5DF;
+        stroke: #7CE5DF;
+    }
+
+    100% {
+        fill: #D4F6F4;
+        stroke: #D4F6F4;
+    }
+}
+
+.hexa {
+    display: block;
+    position: relative;
+    width: 164px;
+    height: 184px;
+    cursor: pointer;
+}
+
+.hexa svg{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hexa svg:first-child {
+    animation: shadow-pulse 2s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+}
+
+.hexa svg:first-child path, .hexa svg:last-child path:nth-child(2) {
+    animation: border-pulse 2s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+}
+
+.hexa:hover svg:last-child {
+    transform: scale(1.15);
+    transform-origin: 50% 50%;
+}
