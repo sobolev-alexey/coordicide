@@ -11,8 +11,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 900px;
     width: 100%;
+    padding-top: 50px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.97) 50%,rgba(255,255,255,1) 100%), url('/static/pattern.png');
 
     .text {
         max-width: 600px;
@@ -31,6 +32,40 @@
         height: 500px;
         position: relative;
         margin-bottom: 80px;
+
+        .intro-blur-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            position: relative;
+
+            -webkit-filter: blur(0px); 
+            -moz-filter: blur(0px); 
+            -o-filter: blur(0px); 
+            -ms-filter: blur(0px);
+            filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='0'); 
+            filter: blur(0px);
+            -webkit-transition: 0.7s -webkit-filter linear;
+        }
+
+        &:hover {
+            .intro-blur-wrapper {
+                -webkit-filter: blur(5px); 
+                -moz-filter: blur(5px);
+                -o-filter: blur(5px); 
+                -ms-filter: blur(5px); 
+                filter: url(#blur); 
+                filter: blur(5px);  
+                filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='1');
+                -webkit-transition: 0.7s -webkit-filter linear;
+            }
+
+            .play-button-wrapper {
+                z-index: 7;
+            }
+        }
 
         .intro-shape-outer {
             position: absolute;
@@ -79,10 +114,10 @@
         max-width: 900px;
         height: 150px;
         width: 100%;
+        margin-bottom: 100px;
 
         & > .large:first-child {
-            padding-right: 50px;
-            width: 290px;
+            width: 265px;
         }
     }
 }
@@ -121,6 +156,10 @@
         
             & > * {
                 margin: 10px 0;
+            }
+
+            img {
+                width: 55px;
             }
         }
     }
@@ -163,7 +202,7 @@
         max-width: 450px;
         width: 100%;
         padding: 30px;
-        margin: 40px 0;
+        margin: 0;
 
         &:hover {
             background: rgba(176, 241, 238, 0.3);
@@ -180,6 +219,12 @@
 
         img {
             width: 73px;
+        }
+
+        .subtitle {
+            letter-spacing: 0.25em;
+            font-size: 14px;
+            margin-top: 0;
         }
     }
 }
@@ -218,8 +263,6 @@
 }
 
 .intro-page {
-    padding-top: 50px;
-
     .left-shape {
         position: absolute;
         left: -750px;
