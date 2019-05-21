@@ -9,7 +9,7 @@ export default () => (
     <div className="papers-wrapper">
         <div className="paper">
             <Text className="title">Whitepaper</Text>
-            <Text className="mini">4-6 Words would look awesome</Text>
+            <Text className="mini">Formal Presentation of Our Coordicide Solution</Text>
             <a 
                 className="btn medium primary"
                 download
@@ -18,7 +18,7 @@ export default () => (
             <FontAwesomeIcon icon={faFileInvoice} />
                 Download
             </a>
-            <Text className="micro with-dot">Updated 23 June 2019</Text>
+            <Text className="micro with-dot">Updated 23 May 2019</Text>
         </div>
         <span className="separator" />
         <div className="paper">
@@ -32,7 +32,7 @@ export default () => (
                 <FontAwesomeIcon icon={faFileInvoice} />
                 Download
             </a>
-            <Text className="micro with-dot">Updated 23 June 2019</Text>
+            <Text className="micro with-dot">Updated 23 May 2019</Text>
         </div>
     </div>
 )
