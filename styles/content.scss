@@ -1,3 +1,5 @@
+@import '../styles/colors';
+
 .content-main {
     margin: 0 auto;
     width: 100%;
@@ -37,6 +39,12 @@
         height: 500px;
         position: relative;
         margin-bottom: 80px;
+
+        .animated-text {
+            position: absolute;
+            bottom: 0;
+            z-index: -1;
+        }
 
         .intro-blur-wrapper {
             display: flex;
@@ -79,6 +87,14 @@
 
             .play-button-wrapper {
                 z-index: 7;
+            }
+
+            .animated-text {
+                z-index: 7;
+            }
+
+            .cascading-text__letter {
+                animation-play-state: running;
             }
         }
 
