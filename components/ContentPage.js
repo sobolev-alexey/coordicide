@@ -3,6 +3,7 @@ import Layout from './Layout'
 import PreviousPage from './PreviousPage'
 import NextPage from './NextPage'
 import Text from './Text'
+import Tooltip from './Tooltip'
 import { 
     Scalability,
     PostCoordinator,
@@ -57,6 +58,11 @@ export default ({ page, next = {}, prev = {} }) => {
                     ) : null
                 }
             </div>
+            {
+                page.tooltips && page.tooltips.map(tooltip => 
+                    <Tooltip tooltipId={tooltip} key={tooltip} />
+                )
+            }
         </Layout>
     )
 }
