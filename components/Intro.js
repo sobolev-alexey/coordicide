@@ -5,6 +5,7 @@ import Text from './Text'
 import Shape from './Shape'
 import Button from './Button'
 import PlayButton from './PlayButton'
+import CascadingAnimation from './CascadingAnimation';
 
 import '../styles/content.scss'
 
@@ -28,6 +29,7 @@ export default () => {
                 ) : (
                     <div className="intro">
                         <PlayButton onClick={() => setShowVideo(true)} />
+                        <CascadingAnimation />
                         <div className="intro-blur-wrapper">
                             <Shape className="intro-shape-outer" color="#ffffff" width="383px" height="434px" />
                             <Shape className="intro-shape-inner" color="rgba(232, 242, 248, 0.6)" width="193px" height="218px" />
