@@ -43,7 +43,7 @@ export default ({ page, next = {}, prev = {} }) => {
                 }
             </div>
             <div className="content">
-                <div className="content">{getContent(page.link)}</div>
+                {getContent(page.link)}
             </div>
             <div className="content-footer">
                 {

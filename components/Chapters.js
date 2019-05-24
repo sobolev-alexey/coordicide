@@ -20,8 +20,15 @@ export default ({ closeNav }) => {
         <div className="chapters-outer-wrapper">
             <div className="chapters-overlay">
                 <div className="close-nav" onClick={closeNav} />
-                <Text className="subtitle">Chapter</Text>
+                <Text className="subtitle label">Chapter</Text>
                 <div className="chapters-wrapper">
+                    <Link prefetch href="/scalability">
+                        <div className="chapter intro">
+                            <Text className="title">{' '}</Text>
+                            <Text className="subtitle">Introduction</Text>
+                            <Text className="read">Read</Text>
+                        </div>
+                    </Link>
                     <Link prefetch href="/scalability">
                         <div className="chapter">
                             <Text className="title">01</Text>

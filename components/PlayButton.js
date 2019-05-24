@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import '../styles/play.scss'
 
@@ -15,4 +15,4 @@ export default ({ onClick }) => (
             </svg>
         </a>
     </div>
-);
+)

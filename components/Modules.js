@@ -34,7 +34,7 @@ export default () => {
                 <Text className="subtitle">Module 1</Text>
                 <Text className="title">Node identities</Text>
                 <Text>Build a reputation and help secure the network by being a good actor.</Text>
-                <Link prefetch href="/node-identities">
+                <Link prefetch href="/module1">
                     <a className="btn mini">Details</a>
                 </Link>
             </div>
@@ -47,7 +47,7 @@ export default () => {
                 <Text className="subtitle">Module 2</Text>
                 <Text className="title">Auto-Peering</Text>
                 <Text>Connect to the network automatically, reducing the effort involved in running a node.</Text>
-                <Link prefetch href="/auto-peering">
+                <Link prefetch href="/module2">
                     <a className="btn mini">Details</a>
                 </Link>
             </div>
@@ -60,7 +60,7 @@ export default () => {
                 <Text className="subtitle">Module 3</Text>
                 <Text className="title">Spam Protection</Text>
                 <Text>Enable low-powered IoT devices to access the network through our adaptive rate control mechanism.</Text>
-                <Link prefetch href="/spam-protection">
+                <Link prefetch href="/module3">
                     <a className="btn mini">Details</a>
                 </Link>
             </div>
@@ -73,7 +73,7 @@ export default () => {
                 <Text className="subtitle">Module 4</Text>
                 <Text className="title">Tip Selection</Text>
                 <Text>Ensure your transaction gets picked up by the network and improve transaction times through an optimized tip selection algorithm.</Text>
-                <Link prefetch href="/tip-selection">
+                <Link prefetch href="/module4">
                     <a className="btn mini">Details</a>
                 </Link>
             </div>
@@ -86,7 +86,7 @@ export default () => {
                 <Text className="subtitle">Module 5</Text>
                 <Text className="title">Shimmer</Text>
                 <Text>Reach a consensus in seconds through a revolutionary voting module which leverages proactive communication in the network. This allows for irreversible transactions to be made within seconds.</Text>
-                <Link prefetch href="/shimmer">
+                <Link prefetch href="/module5">
                     <a className="btn mini">Details</a>
                 </Link>
             </div>

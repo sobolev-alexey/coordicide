@@ -14,8 +14,13 @@ export default ({ onClick }) => (
 
         <div className="menu-links">
             <Link prefetch href="/">
-                <a className="menu-link">
+                <a className="menu-link intro">
                     Introduction
+                </a>
+            </Link>
+            <Link prefetch href="/">
+                <a className="menu-link-mobile intro">
+                    Intro
                 </a>
             </Link>
             <a 
@@ -30,7 +35,7 @@ export default ({ onClick }) => (
                 className="menu-link contents"
                 onClick={onClick}
             >
-                Contents
+                <span>Contents</span>
             </Button>
         </div>
     </div>
