@@ -423,3 +423,157 @@ A message that transfers funds or information between two nodes. A transaction i
 
 
 
+
+
+
+
+
+
+
+
+
+export const P1 = () => markdown`
+
+_At IOTA, we are <span className="myclass">preparing</span> to take the most significant step to date in the maturity of the protocol. This step in effect realizes the dream of a permissionless and scalable distributed ledger technology (DLT). We refer to this event as Coordicide (death of the Coordinator)._
+
+`
+
+export const P2 = () => markdown`
+
+# Why IOTA
+
+IOTA’s goal is to establish an __innovative DLT for the Internet of Things__ (IoT). To achieve this goal, the IOTA Foundation has defined the following characteristics as fundamental to its vision for a modular protocol:
+* __Scalable__. We want to be able to elaborate and process a very large number of transactions per second, not constrained by protocol limitations.
+* __Lightweight__. Low-power devices should be able to directly participate in the network.
+* __Feeless__. Generating transactions does not require any network fees, which paves the way to micro-transactions, a foundational aspect of the IoT world.
+
+`
+
+export const P3 = () => markdown`
+
+# IOTA as scalable DLT
+
+Traditional DLTs have limiting factors that make them unsuitable for attaining IOTA’s goal.
+
+The first limit stems from the blockchain data structure, which inherently limits the speed of the network. This limit is commonly referred to as the “blockchain bottleneck.” 
+
+<img src="/static/q_oracle_assemblies.png"/>
+
+On the other hand, the core __data layer__ in IOTA is, in theory, __infinitely scalable__. This layer is subject to a simple rule on the relationship among transactions: Each transaction references and approves two existing transactions. This rule defines the data structure of the Tangle, which in mathematical terms is known as a directed acyclic graph (DAG).
+
+(Note: We say “infinitely scalable in theory” because any digital system is ultimately constrained by hardware and networking limits.)
+
+<img src="/static/q_oracle_assemblies.png"/>
+
+The second limit can be found in the consensus mechanism. Nakamoto consensus splits the network into miners and users. Miners use large amounts of energy to complete the Proof-of-Work (PoW) that chains together the blocks. To compensate the miners for this work, users pay fees to send transactions. Fees are a barrier to a machine-to-machine economy, in which micropayment values are often less than the fee requirements.
+
+<img src="/static/q_oracle_assemblies.png"/>
+
+Conversely, in IOTA there is no distinction between miners and users, and all nodes can participate in the consensus. The definition of the __consensus layer__ is at the core of IOTA and describes how nodes agree on which transactions are trustworthy. In the current IOTA implementation of the Tangle, nodes trust transactions referenced and approved by “milestones.” Milestones are normal transactions issued by the Coordinator. The use of this centralized “finality device” has been necessary to strengthen the security of the network during its initial phase.
+
+After Coordicide, however, __IOTA’s feeless network will continue to enable micropayments, while preserving decentralization and ledger security.__
+
+`
+
+export const P4 = () => markdown`
+
+# Modularity
+
+## Subtitle
+
+The idea of a modular DLT is often overlooked. It is somehow assumed that because DLTs are software, that they are inherently upgradeable. This is true in a sense, but to fully realize modularity in a DLT, it must be designed as such from the ground up. We feel that the freedom to optimize and upgrade any part of the protocol at any time is critical to the long-term success of such a rapidly-advancing technology. 
+
+To give IOTA the freedom to be optimized and upgraded at any time, our Coordicide proposal renews the IOTA implementation as a modular DLT. Our Coordicide team has been developing several modules that __remove the need for the Coordinator__ in IOTA’s consensus layer. These modules introduce additional side benefits:
+* Decreased transaction finality times (within seconds)
+* Reduced need for promotions and reattachments
+* Introduction of an auto peering mechanism
+* Message overhead reduction
+
+On the following pages, we provide an overview of the different modules. First, we create a mechanism to associate an identity to each node. This identity will be subsequently used to automatically build a small world network through auto peering and to control the transaction rate depending on the network limitations. The core of the Coordicide, however, is our improved consensus mechanism: We propose a voting scheme that complements the tip selection algorithm to maximize decentralization and security. Voting is used by the nodes to resolve conflicts by asking the opinion of the neighbors on the ledger status. In the following, we will discuss two proposed (non-mutually exclusive) implementations, namely the <a href="https://iota.org">Fast Probabilistic Consensus</a> and the Cellular Automata.
+
+We refer the interested reader to our <a href="https://iota.org">Coordicide white paper</a>, where we further develop the ideas presented in this website.
+
+Please be aware that although we are confident in the proposed solutions, we still need to complete simulations and further research. As a result, specific modules may change by the time we release them on the Mainnet. That said, what follows is a map of the basic building blocks for a post-coordinator IOTA network. 
+
+We share your excitement about seeing these ideas come to fruition in the months ahead! As such, we look forward to sharing new simulation results as they become available, as well as community participation in optimizing the solution. 
+
+`
+
+export const P5 = () => markdown`
+
+# Consensus in Post-Coordinator IOTA
+
+## Preliminaries
+
+The goal of Coordicide is to build a network that can reach a consensus without the Coordinator. With this goal we must also ensure the network has the following characteristics:
+* _Scalability_: The rate of transactions in the network is not bounded by protocol limitations.
+* _Security_: An attacker cannot influence the consensus.
+* _Decentralization_: All honest nodes can be part of the consensus process.
+
+Current DLT solutions can guarantee only two out of three characteristics at the same time. This problem is known as the “<a href="https://github.com/ethereum/wiki/wiki/Sharding-FAQ">scalability trilemma</a>.”
+
+An example of the trilemma is in PoW-based blockchains like Bitcoin. These blockchains offer security and decentralization, but lack scalability:
+* _Security_: Miners complete PoW to chain together blocks of transactions. All miners attach their blocks to the longest chain (“longest chain wins” rule).
+* _Decentralization_: Miners are distributed across the network. No single miner (or mining pool) controls the majority of the hashing power.
+
+All blocks on the Bitcoin blockchain have a limited size. This block size limit reduces the rate of transactions and affects scalability. Furthermore, miners choose the transactions with the highest reward (transaction fees) to include in their blocks. The revolutionary nature of this solution should not be understated -- but at the same time, we cannot overstate its highly negative impact the theoretical network throughput of any PoW-based DLT.
+
+Unlike Nakamoto consensus, with the Coordinator IOTA offers security and scalability, but lacks decentralization:
+* _Scalability_: Each transaction references and approves two previous ones. You can attach transactions to the Tangle anywhere and at any time. No miners are involved.
+* _Security_: The Coordinator secures the network by sending milestone transactions. Nodes consider transactions trustworthy when they are referenced and approved by a valid milestone.
+
+The white paper version of the Tangle allows users to attach transactions to any part of the Tangle. The selected part is called a subtangle.
+
+Users can attach transactions to a subtangle thanks to the DAG graph structure, in which a new transaction approves two previous ones. This approval process increases the selected subtangle’s cumulative weight. (A concept that's analogous to adding to the “longest chain".) By providing the option for multiple attachment sites and eliminating the need for blocks, the Tangle guarantees scalability.
+
+But, because the Coordinator is a single client, it is considered centralized.
+
+## An improved Tangle: decentralized and secure!
+
+The naive remotion of the Coordinator is not sufficient for achieving decentralization. In fact, the consensus mechanism described in the IOTA white paper is based on the __assiduous honest majority__ assumption, which requires that the majority of transactions always come from honest network participants, i.e., honest actors need to own a majority of the hashing power and to constantly produce transactions. The implication is that honest nodes would continuously need to send transactions, regardless of whether they are actually using the network or not. Since IOTA does not have miners, it also has no concept of constant, honest hashing power securing the Tangle against attackers in the absence of massive adoption.
+
+The goal of Coordicide is to solve the scalability trilemma by providing a decentralized, secure network while preserving a high transaction rate. The core of the solution is a __voting mechanism__ where nodes ask the opinion of their neighbouring nodes in order to decide which transactions should be part of the Tangle, and which ones should be orphaned.
+
+To get rid of the Coordinator, a number of challenges must be solved. Due to the complexity of the work, we break down the Coordicide into the subsequent steps. These steps are a way to present the Coordicide in a simple fashion to a non-technical audience. Furthermore, they make our Coordicide proposal __modular__, where each step can be replaced independently of the others, if new research unveils more optimal solutions.
+
+`
+
+export const P6 = () => markdown`
+
+# The Modules
+
+## Back to the drawing board: What are we trying to solve?
+
+Let’s start with asking two very fundamental questions:
+* _What is it that we try to achieve when we talk about “the network reaching consensus”?
+The answer is actually really simple: We are interested in the network adopting the opinion of the majority of honest full nodes._
+* _Since IOTA does not have to choose a “leader” to mine blocks, what are we actually voting on?
+The answer is again relatively simple: We are voting on which part of the Tangle is the preferred one when selecting tips (the non-preferred part will be orphaned)._
+
+If we look at the first question, we immediately realize that a traditional PoW-based DLT is not well-suited to achieve our requirements, as PoW favors hashing power and an attacker can influence the consensus by issuing malicious transactions through honest nodes, without even running a node himself. The second question also poses problems for PoW-based DLTs, since casting votes on “where to attach” by “attaching somewhere” will inevitably lead to situations where honest actors will vote on the wrong part of the Tangle (accidentally), which will then force them to reattach their transactions.
+
+`
+
+export const P7 = () => markdown`
+
+# IOTA’s Diverse Future 
+
+We hope that after reading this website, and also the technical papers, you now have a much greater understanding of the nature of the challenges ahead, but that you also share our enthusiasm about our path forward. 
+
+This goal of this website has been to introduce the Cooridicide to the public, including its individual modules. What we have yet to offer is a detailed response to the perfectly natural question of: “What does this all mean?” The reason for this is twofold. First, as an organization, our top priority at this time remains the achievement of the decentralized network we have described. Second, the truth of the matter is that no one fully understands the potential of IOTA as a modular DLT with this implementation of Coordicide. We want to offer some initial “food for thought” around this topic, which we will follow up on in a later blog update.
+
+---
+
+In distributed computing:
+
+> **A quorum** is the minimum number of votes that a distributed transaction has to obtain in order to be allowed to perform an operation in a <a href="https://en.wikipedia.org/wiki/Distributed_system" target="_blank">distributed system</a>.
+
+<img src="/static/q_oracle_assemblies.png"/>
+
+1.  If rewards or voting power were distributed evenly among oracles (equal parts per oracle), a single oracle could impersonate multiple oracles to conduct a Sybil attack. To prevent this, Qubic requires oracles to participate in a resource test phase before the assembly starts processing qubics.
+
+2.  If results were posted openly, an oracle could cheat by not doing any processing and simply copy the quorum result that is forming. We call this a classroom attack. To prevent this, results are posted in two steps. Oracles first post a commit transaction that uniquely identifies the oracle and their result, but without giving away the answer. Only later do they post the reveal transaction, which the consumers read to find the results.
+
+As imagined in the Qubic <a href="https://qubic.iota.org/static/teaser_720p.mp4" target="_blank">teaser video</a>, here is a set of qubics (specifically: an oracle machine, an outsourced computation, and a smart contract) which work together and evolve over time to do something useful - in this case, foreign exchange trading.
+
+`
