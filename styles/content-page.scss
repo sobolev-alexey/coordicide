@@ -17,6 +17,10 @@
         letter-spacing: 0.25em;
         color: #727E97;
     }
+
+    @media (max-width: 768px) {
+        padding-top: 50px;
+    }
 }
 
 .content {

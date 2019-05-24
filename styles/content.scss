@@ -22,6 +22,11 @@
         &.subtitle {
             margin-bottom: 20px;
         }
+
+
+        @media (max-width: 768px) {
+            margin: 0 15px;
+        }
     }
 
     .intro {
@@ -48,6 +53,16 @@
             filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='0'); 
             filter: blur(0px);
             -webkit-transition: 0.7s -webkit-filter linear;
+
+            @media (max-width: 580px) {
+                .intro-shape-outer {
+                    width: 300px;
+                }
+
+                .intro-shape-inner {
+                    width: 150px;
+                }
+            }
         }
 
         &:hover {
@@ -88,8 +103,12 @@
             z-index: 5;
             margin-top: 45px;
 
-            @media (max-width: 768px) {
-                font-size: 50px;
+            @media (max-width: 850px) {
+                font-size: 70px;
+            }
+
+            @media (max-width: 580px) {
+                font-size: 40px;
             }
         }
 
@@ -116,8 +135,19 @@
         width: 100%;
         margin-bottom: 100px;
 
-        & > .large:first-child {
-            width: 265px;
+        .btn {
+            @media (max-width: 768px) {
+                width: 300px;
+            }
+
+            @media (max-width: 580px) {
+                width: 200px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            margin-top: 40px;
+            margin-bottom: 60px;
         }
     }
 }
@@ -215,6 +245,11 @@
             &:last-child {
                 margin-top: 15px;
             }
+
+
+            @media (max-width: 580px) {
+                margin: 7px 15px;
+            }
         }
 
         img {
@@ -260,6 +295,22 @@
             margin-top: 15px;
         }
     }
+
+    @media (max-width: 580px) {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: end;
+        height: auto;
+
+        .separator {
+            display: none;
+        }
+
+        .paper {
+            margin: 50px;
+        }
+    }
 }
 
 .intro-page {
@@ -283,4 +334,3 @@
         }
     }
 }
-

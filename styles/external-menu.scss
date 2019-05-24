@@ -42,4 +42,8 @@
     &:hover {
         color: $q-purple;
     }
+
+    @media (max-width: 580px) {
+        margin-right: 40px;
+    }
 }
