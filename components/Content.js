@@ -9,17 +9,19 @@ export const Content = [
         link: 'scalability',
         title: 'Chapter 1',
         subtitle: 'IOTA as scalable DLT',
-        tooltips: ['blockchain_bottleneck', 'consensus']
+        tooltips: ['blockchain_bottleneck', 'transaction', 'consensus', 'nakamoto_consensus', 'proof_of_work', 'milestones', 'finality']
     }, 
     {
         link: 'post-coordinator',
         title: 'Chapter 2',
         subtitle: 'IOTA POST-COORDINATOR',
+        tooltips: ['orphan']
     }, 
     {
         link: 'modularity',
         title: 'Chapter 3',
         subtitle: ' Modularity',
+        tooltips: ['finality', 'promotion_and_reattachment', 'peering', 'message_overhead']
     }, 
     {
         link: 'modules',
@@ -30,229 +32,346 @@ export const Content = [
         link: 'module1',
         title: 'Module 1',
         subtitle: 'Node identities and mana',
+        tooltips: ['sybil_attack']
     }, 
     {
         link: 'module2',
         title: 'Module 2',
-        subtitle: 'Node identities and mana',
+        subtitle: 'Secure auto-peering',
+        tooltips: ['neighbors', 'eclipse_attack', 'small_world_network']
     }, 
     {
         link: 'module3',
         title: 'Module 3',
         subtitle: 'Spam Protection',
+        tooltips: ['mana', 'mining_races']
     }, 
     {
         link: 'module4',
         title: 'Module 4',
-        subtitle: 'Tip Selection Algorithm ',
+        subtitle: 'Tip Selection Algorithm',
+        tooltips: ['tip', 'history', 'promotion', 'reattachment']
     }, 
     {
         link: 'module5',
         title: 'Module 5',
         subtitle: 'Proactive conflict resolution',
+        tooltips: ['parasite_chain_attacks', 'subtangle']
     }, 
     {
         link: 'future',
         title: 'Chapter 5',
         subtitle: 'IOTA´s FUTURE',
+        tooltips: ['ixi']
     }, 
     {
         link: 'conclusion',
         title: 'Chapter 6',
         subtitle: 'Conclusion',
+        tooltips: ['promotion', 'reattachment']
     }, 
 ]
 
-export const Scalability = () => markdown`
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a data-tip data-for='blockchain_bottleneck'>Tristique</a> senectus et netus et malesuada fames ac turpis egestas. Condimentum vitae sapien pellentesque habitant morbi tristique senectus. Imperdiet sed euismod nisi porta lorem mollis. Eu consequat ac felis donec et. Pellentesque id nibh tortor id aliquet lectus proin nibh. Non odio euismod lacinia at quis risus sed vulputate. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Consequat interdum varius sit amet. A iaculis at erat pellentesque adipiscing commodo elit. Urna et pharetra pharetra massa. Cursus in hac habitasse platea dictumst quisque sagittis purus sit. Magna fermentum iaculis eu non. Tincidunt praesent semper feugiat nibh sed pulvinar. Pellentesque habitant morbi tristique senectus et netus et malesuada. Senectus et netus et malesuada fames ac. Eget gravida cum sociis natoque.
-
-Ut eu sem integer vitae. <a data-tip data-for='consensus'>Nascetur</a> ridiculus mus mauris vitae ultricies leo integer malesuada. Nam at lectus urna duis convallis convallis tellus id interdum. Cum sociis natoque penatibus et magnis dis parturient montes. Posuere sollicitudin aliquam ultrices sagittis. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Pellentesque pulvinar pellentesque habitant morbi tristique senectus. Suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Neque volutpat ac tincidunt vitae semper quis. Sapien pellentesque habitant morbi tristique senectus et.
-
-<img src="/static/q_oracle_assemblies.png"/>
-
-Arcu ac tortor dignissim convallis. Pellentesque habitant morbi tristique senectus et netus. Lectus vestibulum mattis ullamcorper velit. Turpis egestas sed tempus urna et pharetra. Egestas integer eget aliquet nibh praesent tristique. Cum sociis natoque penatibus et magnis dis parturient montes nascetur. Amet purus gravida quis blandit turpis cursus. Posuere urna nec tincidunt praesent semper feugiat. Pellentesque dignissim enim sit amet. Consectetur libero id faucibus nisl tincidunt eget nullam non. Donec ultrices tincidunt arcu non sodales neque sodales ut. Scelerisque in dictum non consectetur. Vitae suscipit tellus mauris a diam. Euismod nisi porta lorem mollis. Quam nulla porttitor massa id. Vitae justo eget magna fermentum. Ut sem nulla pharetra diam sit. Tempor nec feugiat nisl pretium fusce id.
-
-<img src="/static/q_oracle_assemblies.png"/>
-
-Vel turpis nunc eget lorem. In dictum non consectetur a. Commodo ullamcorper a lacus vestibulum sed arcu non odio euismod. Donec pretium vulputate sapien nec sagittis. Molestie at elementum eu facilisis sed odio morbi quis. Lorem mollis aliquam ut porttitor. Morbi tincidunt augue interdum velit euismod in pellentesque massa placerat. Malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Consequat nisl vel pretium lectus quam id. Auctor eu augue ut lectus arcu bibendum at varius vel.
-
-`
+export const Scalability = () => markdown``
 
 export const PostCoordinator = () => markdown`
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et malesuada fames ac turpis egestas. Condimentum vitae sapien pellentesque habitant morbi tristique senectus. Imperdiet sed euismod nisi porta lorem mollis. Eu consequat ac felis donec et. Pellentesque id nibh tortor id aliquet lectus proin nibh. Non odio euismod lacinia at quis risus sed vulputate. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Consequat interdum varius sit amet. A iaculis at erat pellentesque adipiscing commodo elit. Urna et pharetra pharetra massa. Cursus in hac habitasse platea dictumst quisque sagittis purus sit. Magna fermentum iaculis eu non. Tincidunt praesent semper feugiat nibh sed pulvinar. Pellentesque habitant morbi tristique senectus et netus et malesuada. Senectus et netus et malesuada fames ac. Eget gravida cum sociis natoque.
+The goal of Coordicide is for the network to reach consensus without the Coordinator, while also ensuring it has the following attributes:
 
-Ut eu sem integer vitae. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Nam at lectus urna duis convallis convallis tellus id interdum. Cum sociis natoque penatibus et magnis dis parturient montes. Posuere sollicitudin aliquam ultrices sagittis. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Pellentesque pulvinar pellentesque habitant morbi tristique senectus. Suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Neque volutpat ac tincidunt vitae semper quis. Sapien pellentesque habitant morbi tristique senectus et.
+* _Scalable:_ The rate of transactions in the network is not limited by the protocol.
+* _Secure:_ An attacker cannot influence the consensus.
+* _Decentralized:_ All honest nodes can be part of the consensus process.
 
-<img src="/static/q_oracle_assemblies.png"/>
+Current DLT solutions can guarantee at most two of these three characteristics at the same time. This problem is known as the “<a href="https://github.com/ethereum/wiki/wiki/Sharding-FAQ">scalability trilemma</a>.”
 
-Arcu ac tortor dignissim convallis. Pellentesque habitant morbi tristique senectus et netus. Lectus vestibulum mattis ullamcorper velit. Turpis egestas sed tempus urna et pharetra. Egestas integer eget aliquet nibh praesent tristique. Cum sociis natoque penatibus et magnis dis parturient montes nascetur. Amet purus gravida quis blandit turpis cursus. Posuere urna nec tincidunt praesent semper feugiat. Pellentesque dignissim enim sit amet. Consectetur libero id faucibus nisl tincidunt eget nullam non. Donec ultrices tincidunt arcu non sodales neque sodales ut. Scelerisque in dictum non consectetur. Vitae suscipit tellus mauris a diam. Euismod nisi porta lorem mollis. Quam nulla porttitor massa id. Vitae justo eget magna fermentum. Ut sem nulla pharetra diam sit. Tempor nec feugiat nisl pretium fusce id.
+<img src="/static/Trilemma_none.png"/>
 
-<img src="/static/q_oracle_assemblies.png"/>
+An example of the trilemma can be found in PoW-based blockchains like Bitcoin. These networks offer security and decentralization, but lack scalability:
 
-Vel turpis nunc eget lorem. In dictum non consectetur a. Commodo ullamcorper a lacus vestibulum sed arcu non odio euismod. Donec pretium vulputate sapien nec sagittis. Molestie at elementum eu facilisis sed odio morbi quis. Lorem mollis aliquam ut porttitor. Morbi tincidunt augue interdum velit euismod in pellentesque massa placerat. Malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Consequat nisl vel pretium lectus quam id. Auctor eu augue ut lectus arcu bibendum at varius vel.
+* Security: Miners complete PoW to chain blocks of transactions together. The combined computing (hash) power of the miners secures the network.
+* Decentralization: Miners are distributed across the network. No single miner controls the majority of the hashing power.
 
+But Bitcoin faces a fundamental problem of scalability. To preserve decentralization and security, blocks in the Bitcoin blockchain must have a limited size. This block size limit caps the rate of transactions and restricts the network’s scalability. As an increasing number of transactions are sent on the network, miners choose to validate the transactions offering the highest fees, leading to spiralling transaction costs and lengthy waiting times. The revolutionary nature of this PoW-based solution should not be understated — but at the same time, we cannot overstate its inherent constraints on network throughput.
+
+IOTA _with the Coordinator_ is scalable and secure, but it is not fully decentralized:
+
+* _Scalable:_ Each transaction references and approves two previous ones. Transactions can be attached to the Tangle anywhere and at any time. No miners are involved.
+* _Secure:_ The Coordinator secures the network by issuing milestone transactions. Nodes only consider transactions as trustworthy when they are referenced and approved by a valid milestone.
+
+The Tangle allows users to attach new transactions to any part of the Tangle. Thanks to its DAG structure, the only requirement is that each new transaction approves two other transactions. By providing the option for multiple attachment sites and eliminating the need for blocks, the Tangle is inherently scalable.
+
+However, while the Coordinator ensures network security, it also represents a single point of failure, and therefore restricts IOTA from being a fully decentralized network. 
+
+## An improved Tangle: decentralized and secure
+
+The removal of the Coordinator alone is not sufficient for achieving decentralization. In fact, the consensus mechanism originally proposed in the IOTA white paper required that the majority of transactions _always_ come from honest network participants. In other words, honest actors would need to own a majority of the network’s hashing power. However, without miners, IOTA has no concept of constant, honest hashing power. The implication is that honest nodes would need to send a continuous stream of transactions, regardless of whether they are actually using the network.
+
+The goal of Coordicide is to solve the scalability trilemma by providing a decentralized, secure network while preserving a high transaction rate. At the core of the solution is a __voting mechanism__ through which nodes request the opinions of other nodes in order to decide which transactions should be included in the Tangle, and which should be <a data-tip data-for='orphan'>orphaned</a>.
+
+To remove the Coordinator, a number of challenges must be solved. Due to the complexity of the solution, Coordicide is broken down into different components. This approach makes our Coordicide proposal __modular__, meaning that each module can be independently replaced should new research reveal further improvements.
+
+Our aim is to make IOTA the gold standard: enterprise-ready DLT, working together with <a href="https://blog.iota.org/iota-becomes-a-founding-member-of-new-international-association-of-trusted-blockchain-applications-b0c6417aaded">key organisations</a> and <a href="https://www.omg.org/cgi-bin/doc?omg/2019-03-03">standards bodies</a>, using <a href="https://projects.eclipse.org/proposals/eclipse-iota-trinity">open source governance</a>.
 
 `
 
 export const Modularity = () => markdown`
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et malesuada fames ac turpis egestas. Condimentum vitae sapien pellentesque habitant morbi tristique senectus. Imperdiet sed euismod nisi porta lorem mollis. Eu consequat ac felis donec et. Pellentesque id nibh tortor id aliquet lectus proin nibh. Non odio euismod lacinia at quis risus sed vulputate. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Consequat interdum varius sit amet. A iaculis at erat pellentesque adipiscing commodo elit. Urna et pharetra pharetra massa. Cursus in hac habitasse platea dictumst quisque sagittis purus sit. Magna fermentum iaculis eu non. Tincidunt praesent semper feugiat nibh sed pulvinar. Pellentesque habitant morbi tristique senectus et netus et malesuada. Senectus et netus et malesuada fames ac. Eget gravida cum sociis natoque.
+The potential of a truly modular DLT is often overlooked. Many assume that because DLTs are software they are inherently upgradeable. In practice, however, software that was not designed with modular foundations will begin to stagnate. Flexibility to upgrade in the future is critical to the long-term success of such rapidly advancing technology. 
 
-Ut eu sem integer vitae. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Nam at lectus urna duis convallis convallis tellus id interdum. Cum sociis natoque penatibus et magnis dis parturient montes. Posuere sollicitudin aliquam ultrices sagittis. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Pellentesque pulvinar pellentesque habitant morbi tristique senectus. Suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Neque volutpat ac tincidunt vitae semper quis. Sapien pellentesque habitant morbi tristique senectus et.
+To give the IOTA protocol this flexibility, and enable it to serve a diverse set of use cases in the future, the Coordicide solution renews IOTA as a modular DLT We have developed several __modules__ that __remove the need for the Coordinator__ in IOTA’s consensus layer. 
 
-<img src="/static/q_oracle_assemblies.png"/>
+These modules introduce several additional benefits, including:
 
-Arcu ac tortor dignissim convallis. Pellentesque habitant morbi tristique senectus et netus. Lectus vestibulum mattis ullamcorper velit. Turpis egestas sed tempus urna et pharetra. Egestas integer eget aliquet nibh praesent tristique. Cum sociis natoque penatibus et magnis dis parturient montes nascetur. Amet purus gravida quis blandit turpis cursus. Posuere urna nec tincidunt praesent semper feugiat. Pellentesque dignissim enim sit amet. Consectetur libero id faucibus nisl tincidunt eget nullam non. Donec ultrices tincidunt arcu non sodales neque sodales ut. Scelerisque in dictum non consectetur. Vitae suscipit tellus mauris a diam. Euismod nisi porta lorem mollis. Quam nulla porttitor massa id. Vitae justo eget magna fermentum. Ut sem nulla pharetra diam sit. Tempor nec feugiat nisl pretium fusce id.
+* Decreased <a data-tip data-for='finality'>finality</a> times (within seconds)
+* Reduced need for <a data-tip data-for='promotion_and_reattachment'>promotion and reattachment</a>
+* Introduction of an auto-<a data-tip data-for='peering'>peering</a> mechanism
+* <a data-tip data-for='message_overhead'>Message overhead</a> reduction
 
-<img src="/static/q_oracle_assemblies.png"/>
+The core Coordicide module is an improved consensus mechanism: a voting scheme that complements the tip selection algorithm to maximize decentralization and security. We have also devised a system of associating an identity with each node. Through auto-peering, this identity is used to build a small-world network and control the transaction rate. Nodes then vote to resolve conflicts by asking other nodes about their ledger status. 
 
-Vel turpis nunc eget lorem. In dictum non consectetur a. Commodo ullamcorper a lacus vestibulum sed arcu non odio euismod. Donec pretium vulputate sapien nec sagittis. Molestie at elementum eu facilisis sed odio morbi quis. Lorem mollis aliquam ut porttitor. Morbi tincidunt augue interdum velit euismod in pellentesque massa placerat. Malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Consequat nisl vel pretium lectus quam id. Auctor eu augue ut lectus arcu bibendum at varius vel.
+<img src="/static/hexagon-modularity.png"/>
 
+In the following sections, we discuss the two proposed (non-mutually exclusive) consensus implementations: __Cellular Consensus__ and <a href="https://arxiv.org/pdf/1905.10895.pdf">Fast Probabilistic Consensus</a>.
+
+We also refer interested readers to our <a href="https://files.iota.org/papers/Coordicide_WP.pdf">Coordicide white paper</a>, where we further develop the ideas presented here.
+
+What follows is a map of the basic building blocks for a post-Coordinator IOTA network. We are currently in the process of developing a prototype of the system, and plan to release testnets for individual building blocks, before merging the components into a single Coordinator-free testnet. We will share new simulation results as they become available, and we look forward to working with the community on these testnets. 
 
 `
 
 
 export const Modules = () => markdown`
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et malesuada fames ac turpis egestas. Condimentum vitae sapien pellentesque habitant morbi tristique senectus. Imperdiet sed euismod nisi porta lorem mollis. Eu consequat ac felis donec et. Pellentesque id nibh tortor id aliquet lectus proin nibh. Non odio euismod lacinia at quis risus sed vulputate. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Consequat interdum varius sit amet. A iaculis at erat pellentesque adipiscing commodo elit. Urna et pharetra pharetra massa. Cursus in hac habitasse platea dictumst quisque sagittis purus sit. Magna fermentum iaculis eu non. Tincidunt praesent semper feugiat nibh sed pulvinar. Pellentesque habitant morbi tristique senectus et netus et malesuada. Senectus et netus et malesuada fames ac. Eget gravida cum sociis natoque.
+## What are we trying to solve?
 
-Ut eu sem integer vitae. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Nam at lectus urna duis convallis convallis tellus id interdum. Cum sociis natoque penatibus et magnis dis parturient montes. Posuere sollicitudin aliquam ultrices sagittis. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Pellentesque pulvinar pellentesque habitant morbi tristique senectus. Suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Neque volutpat ac tincidunt vitae semper quis. Sapien pellentesque habitant morbi tristique senectus et.
+Let’s start by asking two fundamental questions:
 
-<img src="/static/q_oracle_assemblies.png"/>
+* _What are we trying to achieve when we talk about “the network reaching a consensus”?_  
+The answer is actually very simple. We want all honest nodes to maintain the same opinion about the state of the ledger. Or more simply, we want all honest nodes to agree which transactions are valid.
+* _Since IOTA does not have to choose a “leader” to mine blocks, what are we actually voting on?_  
+The answer is again relatively simple. If two transactions are conflicting, they lead to a split in the Tangle. To resolve the conflict, nodes vote on a preferred transaction (the non-preferred transaction becomes an orphan).
 
-Arcu ac tortor dignissim convallis. Pellentesque habitant morbi tristique senectus et netus. Lectus vestibulum mattis ullamcorper velit. Turpis egestas sed tempus urna et pharetra. Egestas integer eget aliquet nibh praesent tristique. Cum sociis natoque penatibus et magnis dis parturient montes nascetur. Amet purus gravida quis blandit turpis cursus. Posuere urna nec tincidunt praesent semper feugiat. Pellentesque dignissim enim sit amet. Consectetur libero id faucibus nisl tincidunt eget nullam non. Donec ultrices tincidunt arcu non sodales neque sodales ut. Scelerisque in dictum non consectetur. Vitae suscipit tellus mauris a diam. Euismod nisi porta lorem mollis. Quam nulla porttitor massa id. Vitae justo eget magna fermentum. Ut sem nulla pharetra diam sit. Tempor nec feugiat nisl pretium fusce id.
+Traditional PoW-based DLT provides one set of answers to these questions, but these have significant drawbacks. PoW-based consensus in IOTA would introduce mining races and lead to increased power consumption and cost, thus limiting the network’s use in IoT. 
 
-<img src="/static/q_oracle_assemblies.png"/>
-
-Vel turpis nunc eget lorem. In dictum non consectetur a. Commodo ullamcorper a lacus vestibulum sed arcu non odio euismod. Donec pretium vulputate sapien nec sagittis. Molestie at elementum eu facilisis sed odio morbi quis. Lorem mollis aliquam ut porttitor. Morbi tincidunt augue interdum velit euismod in pellentesque massa placerat. Malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Consequat nisl vel pretium lectus quam id. Auctor eu augue ut lectus arcu bibendum at varius vel.
-
+A more suitable solution is described in the following sections.
 
 `
 
 
 export const Module1 = () => markdown`
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et malesuada fames ac turpis egestas. Condimentum vitae sapien pellentesque habitant morbi tristique senectus. Imperdiet sed euismod nisi porta lorem mollis. Eu consequat ac felis donec et. Pellentesque id nibh tortor id aliquet lectus proin nibh. Non odio euismod lacinia at quis risus sed vulputate. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Consequat interdum varius sit amet. A iaculis at erat pellentesque adipiscing commodo elit. Urna et pharetra pharetra massa. Cursus in hac habitasse platea dictumst quisque sagittis purus sit. Magna fermentum iaculis eu non. Tincidunt praesent semper feugiat nibh sed pulvinar. Pellentesque habitant morbi tristique senectus et netus et malesuada. Senectus et netus et malesuada fames ac. Eget gravida cum sociis natoque.
+In a network without the Coordinator we must be able to reliably associate transactions or other messages with the node that issued them. For example, to allow nodes to vote we need to be able to identify them (and their votes). Every node therefore generates a unique identifier that it will use to sign messages or cast votes, and thus ensure authenticity.
 
-Ut eu sem integer vitae. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Nam at lectus urna duis convallis convallis tellus id interdum. Cum sociis natoque penatibus et magnis dis parturient montes. Posuere sollicitudin aliquam ultrices sagittis. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Pellentesque pulvinar pellentesque habitant morbi tristique senectus. Suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Neque volutpat ac tincidunt vitae semper quis. Sapien pellentesque habitant morbi tristique senectus et.
+However, a reliance on node identities makes distributed systems vulnerable to <a data-tip data-for='sybil_attack'>Sybil attacks</a>. A way of protecting against such attacks is to link the amount of votes a node may cast to a scarce resource like hashing power in PoW, or staked value in Proof-of-Stake (PoS). 
 
-<img src="/static/q_oracle_assemblies.png"/>
+Unlike PoW-based DLTs, PoS does not suffer from scalability problems. However, in a “longest-chain wins” environment, PoS is vulnerable to certain attacks, such as the “nothing-at-stake problem” (where parties can vote for two conflicting chains at the same time without risking or investing any resource) and “long range attacks” (where large stakeholders can mine a longer chain in secret and then broadcast it later). These two attack vectors make PoS undesirable in “longest-chain wins” networks.
 
-Arcu ac tortor dignissim convallis. Pellentesque habitant morbi tristique senectus et netus. Lectus vestibulum mattis ullamcorper velit. Turpis egestas sed tempus urna et pharetra. Egestas integer eget aliquet nibh praesent tristique. Cum sociis natoque penatibus et magnis dis parturient montes nascetur. Amet purus gravida quis blandit turpis cursus. Posuere urna nec tincidunt praesent semper feugiat. Pellentesque dignissim enim sit amet. Consectetur libero id faucibus nisl tincidunt eget nullam non. Donec ultrices tincidunt arcu non sodales neque sodales ut. Scelerisque in dictum non consectetur. Vitae suscipit tellus mauris a diam. Euismod nisi porta lorem mollis. Quam nulla porttitor massa id. Vitae justo eget magna fermentum. Ut sem nulla pharetra diam sit. Tempor nec feugiat nisl pretium fusce id.
+Since our Coordicide solution does not rely on a longest chain wins rule, our Sybil protection mechanism is not affected by these problems. 
 
-<img src="/static/q_oracle_assemblies.png"/>
+We propose a reputation system that we call _mana_: 
 
-Vel turpis nunc eget lorem. In dictum non consectetur a. Commodo ullamcorper a lacus vestibulum sed arcu non odio euismod. Donec pretium vulputate sapien nec sagittis. Molestie at elementum eu facilisis sed odio morbi quis. Lorem mollis aliquam ut porttitor. Morbi tincidunt augue interdum velit euismod in pellentesque massa placerat. Malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Consequat nisl vel pretium lectus quam id. Auctor eu augue ut lectus arcu bibendum at varius vel.
+1. By moving IOTA in a value transaction users are proving ownership of the amount of IOTA transferred.
+2. Users can “link” value transactions to a node of their choice by adding a node ID to the transaction signature. In practice, this will most probably be the same node used to issue the transaction.
+3. The transaction results in the movement of _mana_ from the node to which it was previously assigned to the node specified in this transaction. This will increase the total mana of the chosen node.
 
+The _mana_ system combines the advantages of a fund-based Sybil protection mechanism with those of a reputation system. _Mana_ is not only credited to a node by transferring IOTA tokens to the node owner. It can also be obtained simply by providing a good service to the community and propagating valid transactions to the network. The amount of total credited _mana_ — acting as a measure of trust or reputation — can be used to further reward “good” actors in other ways (e.g. in the rate control or voting modules).
+
+_Mana_ relies on the notion that reputation is difficult to gain, but easy to lose. A key aspect of any reputation system is the ability to punish bad actors by revoking previously granted reputation. In IOTA, this is as simple as reassigning your granted _mana_ to another node, if your currently preferred node is found to be “misbehaving” (such as propagating invalid transactions).
+
+Finally, a key advantage of _mana_ is that, in contrast to other Sybil protection mechanisms where the node ID is linked to the private key of the owner forcing users to participate in complex and potentially risky staking procedures, the _mana_ system ensures that a large proportion of funds are utilized to assign reputation.
 
 `
 
 
 export const Module2 = () => markdown`
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et malesuada fames ac turpis egestas. Condimentum vitae sapien pellentesque habitant morbi tristique senectus. Imperdiet sed euismod nisi porta lorem mollis. Eu consequat ac felis donec et. Pellentesque id nibh tortor id aliquet lectus proin nibh. Non odio euismod lacinia at quis risus sed vulputate. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Consequat interdum varius sit amet. A iaculis at erat pellentesque adipiscing commodo elit. Urna et pharetra pharetra massa. Cursus in hac habitasse platea dictumst quisque sagittis purus sit. Magna fermentum iaculis eu non. Tincidunt praesent semper feugiat nibh sed pulvinar. Pellentesque habitant morbi tristique senectus et netus et malesuada. Senectus et netus et malesuada fames ac. Eget gravida cum sociis natoque.
+In peer-to-peer networks like IOTA, a node’s <a data-tip data-for='neighbors'>neighbors</a> are its only source of information. Any peering mechanism must therefore focus on connecting to a healthy number of honest neighbors, i.e. nodes not trying to harm the network. 
 
-Ut eu sem integer vitae. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Nam at lectus urna duis convallis convallis tellus id interdum. Cum sociis natoque penatibus et magnis dis parturient montes. Posuere sollicitudin aliquam ultrices sagittis. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Pellentesque pulvinar pellentesque habitant morbi tristique senectus. Suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Neque volutpat ac tincidunt vitae semper quis. Sapien pellentesque habitant morbi tristique senectus et.
+We introduce an auto-peering mechanism in which every node has its own criteria for selecting potential neighbors. An attacker cannot influence a node’s decisions in the peer selection process, and therefore a node’s particular “view” of the network is both local and unpredictable. This serves to protect against outside attacks (such as <a data-tip data-for='eclipse_attack'>eclipse attacks</a>) and makes it practically impossible for attackers to target certain nodes in the peering process, while ensuring nodes always have at least a certain amount of honest neighbors.
 
-<img src="/static/q_oracle_assemblies.png"/>
-
-Arcu ac tortor dignissim convallis. Pellentesque habitant morbi tristique senectus et netus. Lectus vestibulum mattis ullamcorper velit. Turpis egestas sed tempus urna et pharetra. Egestas integer eget aliquet nibh praesent tristique. Cum sociis natoque penatibus et magnis dis parturient montes nascetur. Amet purus gravida quis blandit turpis cursus. Posuere urna nec tincidunt praesent semper feugiat. Pellentesque dignissim enim sit amet. Consectetur libero id faucibus nisl tincidunt eget nullam non. Donec ultrices tincidunt arcu non sodales neque sodales ut. Scelerisque in dictum non consectetur. Vitae suscipit tellus mauris a diam. Euismod nisi porta lorem mollis. Quam nulla porttitor massa id. Vitae justo eget magna fermentum. Ut sem nulla pharetra diam sit. Tempor nec feugiat nisl pretium fusce id.
-
-<img src="/static/q_oracle_assemblies.png"/>
-
-Vel turpis nunc eget lorem. In dictum non consectetur a. Commodo ullamcorper a lacus vestibulum sed arcu non odio euismod. Donec pretium vulputate sapien nec sagittis. Molestie at elementum eu facilisis sed odio morbi quis. Lorem mollis aliquam ut porttitor. Morbi tincidunt augue interdum velit euismod in pellentesque massa placerat. Malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Consequat nisl vel pretium lectus quam id. Auctor eu augue ut lectus arcu bibendum at varius vel.
-
+In addition, the auto-peering mechanism will try to create a <a data-tip data-for='small_world_network'>small-world network</a>, in which nodes can be reached from every other node through a small number of intermediate steps. This property further speeds up the time to reach consensus.
 
 `
 
 
 export const Module3 = () => markdown`
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et malesuada fames ac turpis egestas. Condimentum vitae sapien pellentesque habitant morbi tristique senectus. Imperdiet sed euismod nisi porta lorem mollis. Eu consequat ac felis donec et. Pellentesque id nibh tortor id aliquet lectus proin nibh. Non odio euismod lacinia at quis risus sed vulputate. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Consequat interdum varius sit amet. A iaculis at erat pellentesque adipiscing commodo elit. Urna et pharetra pharetra massa. Cursus in hac habitasse platea dictumst quisque sagittis purus sit. Magna fermentum iaculis eu non. Tincidunt praesent semper feugiat nibh sed pulvinar. Pellentesque habitant morbi tristique senectus et netus et malesuada. Senectus et netus et malesuada fames ac. Eget gravida cum sociis natoque.
+DLTs require a mechanism to control the rate of transactions entering the network, as the limited resources of nodes (e.g., bandwidth, CPU) may become overwhelmed, leading to low throughput. This is similar to a highway, where a large number of vehicles entering the flow of traffic can lead to congestion.
 
-Ut eu sem integer vitae. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Nam at lectus urna duis convallis convallis tellus id interdum. Cum sociis natoque penatibus et magnis dis parturient montes. Posuere sollicitudin aliquam ultrices sagittis. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Pellentesque pulvinar pellentesque habitant morbi tristique senectus. Suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Neque volutpat ac tincidunt vitae semper quis. Sapien pellentesque habitant morbi tristique senectus et.
+Currently, the Tangle implements a simple spam protection mechanism based on PoW. However, controlling the rate of transaction issuance by PoW alone is impractical, as it introduces <a data-tip data-for='mining_races'>mining races</a>. We propose an __adaptive rate control__ mechanism which intelligently varies the difficulty of the PoW per node based on different factors, such as number of recently-issued transactions and <a data-tip data-for='mana'>mana</a>. 
 
-<img src="/static/q_oracle_assemblies.png"/>
+It is important to note that the use of PoW as a rate control mechanism is unrelated to PoW-based consensus, which our Coordicide approach explicitly eliminates. Our rate control mechanism is designed in such a way that it does not lead to mining races, nor does it require a large amount of energy.
 
-Arcu ac tortor dignissim convallis. Pellentesque habitant morbi tristique senectus et netus. Lectus vestibulum mattis ullamcorper velit. Turpis egestas sed tempus urna et pharetra. Egestas integer eget aliquet nibh praesent tristique. Cum sociis natoque penatibus et magnis dis parturient montes nascetur. Amet purus gravida quis blandit turpis cursus. Posuere urna nec tincidunt praesent semper feugiat. Pellentesque dignissim enim sit amet. Consectetur libero id faucibus nisl tincidunt eget nullam non. Donec ultrices tincidunt arcu non sodales neque sodales ut. Scelerisque in dictum non consectetur. Vitae suscipit tellus mauris a diam. Euismod nisi porta lorem mollis. Quam nulla porttitor massa id. Vitae justo eget magna fermentum. Ut sem nulla pharetra diam sit. Tempor nec feugiat nisl pretium fusce id.
+In our model, nodes with higher amounts of _mana_ have the ability to issue more transactions, without the same PoW requirements as low-reputation nodes. Regardless of a node’s _mana_, PoW difficulty increases with transaction rate. i.e. in order to issue more transactions in a short time interval, a node must increase the difficulty of the cryptographic puzzle, while for lower transaction rates a much lower difficulty would be sufficient. 
 
-<img src="/static/q_oracle_assemblies.png"/>
+We enforce a maximum transaction rate per node to further prevent spam. This system brings a double benefit:
 
-Vel turpis nunc eget lorem. In dictum non consectetur a. Commodo ullamcorper a lacus vestibulum sed arcu non odio euismod. Donec pretium vulputate sapien nec sagittis. Molestie at elementum eu facilisis sed odio morbi quis. Lorem mollis aliquam ut porttitor. Morbi tincidunt augue interdum velit euismod in pellentesque massa placerat. Malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Consequat nisl vel pretium lectus quam id. Auctor eu augue ut lectus arcu bibendum at varius vel.
-
+* It protects the network against malicious fast actors, e.g., nodes using ASICs to spam the network and/or influence the consensus.
+* IOTA’s main use case is IoT, which consists of nodes with limited resources that are likely to issue transactions at a slow rate. This mechanism allows slower nodes to successfully propagate their transactions through the network.
 
 `
 
 
 export const Module4 = () => markdown`
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et malesuada fames ac turpis egestas. Condimentum vitae sapien pellentesque habitant morbi tristique senectus. Imperdiet sed euismod nisi porta lorem mollis. Eu consequat ac felis donec et. Pellentesque id nibh tortor id aliquet lectus proin nibh. Non odio euismod lacinia at quis risus sed vulputate. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Consequat interdum varius sit amet. A iaculis at erat pellentesque adipiscing commodo elit. Urna et pharetra pharetra massa. Cursus in hac habitasse platea dictumst quisque sagittis purus sit. Magna fermentum iaculis eu non. Tincidunt praesent semper feugiat nibh sed pulvinar. Pellentesque habitant morbi tristique senectus et netus et malesuada. Senectus et netus et malesuada fames ac. Eget gravida cum sociis natoque.
+The tip selection algorithm is the method by which transactions are selected for approval. A good algorithm allows the Tangle to grow in a stable and secure way.
 
-Ut eu sem integer vitae. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Nam at lectus urna duis convallis convallis tellus id interdum. Cum sociis natoque penatibus et magnis dis parturient montes. Posuere sollicitudin aliquam ultrices sagittis. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Pellentesque pulvinar pellentesque habitant morbi tristique senectus. Suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Neque volutpat ac tincidunt vitae semper quis. Sapien pellentesque habitant morbi tristique senectus et.
+To attach a new transaction to the Tangle, the algorithm needs to select and approve two previous transactions — preferably <a data-tip data-for='tip'>tips</a>. This approval mechanism represents “belief” in the Tangle: If transaction y approves transaction x, this implies that y believes transaction x is valid and that its entire <a data-tip data-for='history'>history</a> is also valid.
 
-<img src="/static/q_oracle_assemblies.png"/>
+In the past, we have used a biased random walk as our tip selection algorithm, as this led not only to a healthy Tangle structure but also allowed us to identify the heaviest, and therefore preferred part of the Tangle. While this mechanism was essential for reaching consensus, it also showed properties that were less desirable:
 
-Arcu ac tortor dignissim convallis. Pellentesque habitant morbi tristique senectus et netus. Lectus vestibulum mattis ullamcorper velit. Turpis egestas sed tempus urna et pharetra. Egestas integer eget aliquet nibh praesent tristique. Cum sociis natoque penatibus et magnis dis parturient montes nascetur. Amet purus gravida quis blandit turpis cursus. Posuere urna nec tincidunt praesent semper feugiat. Pellentesque dignissim enim sit amet. Consectetur libero id faucibus nisl tincidunt eget nullam non. Donec ultrices tincidunt arcu non sodales neque sodales ut. Scelerisque in dictum non consectetur. Vitae suscipit tellus mauris a diam. Euismod nisi porta lorem mollis. Quam nulla porttitor massa id. Vitae justo eget magna fermentum. Ut sem nulla pharetra diam sit. Tempor nec feugiat nisl pretium fusce id.
+* Honest transactions could be left behind if they did not accumulate enough weight. This resulted in an increased need for <a data-tip data-for='promotion'>promotions</a> and <a data-tip data-for='reattachment'>reattachments</a> (even in the absence of attacks), which in turn significantly lowered the reliability of transactions.
+* Attackers could try to “game” the random walk into entering malicious structures like parasitic chains, or prevent the network from reaching consensus by carrying out splitting attacks.
+* Calculating the cumulative weights of transactions is relatively expensive and poses a problem for the scalability of the protocol, especially in high throughput scenarios.
 
-<img src="/static/q_oracle_assemblies.png"/>
+By adding a voting layer to identify the preferred part of the tangle (as an additional module), we are able to:
 
-Vel turpis nunc eget lorem. In dictum non consectetur a. Commodo ullamcorper a lacus vestibulum sed arcu non odio euismod. Donec pretium vulputate sapien nec sagittis. Molestie at elementum eu facilisis sed odio morbi quis. Lorem mollis aliquam ut porttitor. Morbi tincidunt augue interdum velit euismod in pellentesque massa placerat. Malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Consequat nisl vel pretium lectus quam id. Auctor eu augue ut lectus arcu bibendum at varius vel.
+* Resolve conflicts much faster, and therefore lower the chance of a transaction accidentally attaching to the wrong part of the Tangle.
+* Use different tip selection mechanisms that are no longer based on cumulative weight, and have a lower chance of leaving valid transactions behind.
 
+This will increase the reliability of transactions in the IOTA network and significantly reduce the need for reattachments and promotions. It will also make the process of selecting tips much cheaper and faster.
 
 `
 
 
 export const Module5 = () => markdown`
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et malesuada fames ac turpis egestas. Condimentum vitae sapien pellentesque habitant morbi tristique senectus. Imperdiet sed euismod nisi porta lorem mollis. Eu consequat ac felis donec et. Pellentesque id nibh tortor id aliquet lectus proin nibh. Non odio euismod lacinia at quis risus sed vulputate. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Consequat interdum varius sit amet. A iaculis at erat pellentesque adipiscing commodo elit. Urna et pharetra pharetra massa. Cursus in hac habitasse platea dictumst quisque sagittis purus sit. Magna fermentum iaculis eu non. Tincidunt praesent semper feugiat nibh sed pulvinar. Pellentesque habitant morbi tristique senectus et netus et malesuada. Senectus et netus et malesuada fames ac. Eget gravida cum sociis natoque.
+We have described numerous novel concepts so far. But a consensus mechanism based on cumulative weight, and secured by the tip selection algorithm alone, still exposes IOTA to mining races. 
 
-Ut eu sem integer vitae. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Nam at lectus urna duis convallis convallis tellus id interdum. Cum sociis natoque penatibus et magnis dis parturient montes. Posuere sollicitudin aliquam ultrices sagittis. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Pellentesque pulvinar pellentesque habitant morbi tristique senectus. Suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Neque volutpat ac tincidunt vitae semper quis. Sapien pellentesque habitant morbi tristique senectus et.
+To overcome this issue, we propose an __additional layer of security__ where nodes exchange opinions by voting. There has been a significant body of research over the years on voter models. In probabilistic models a node requests the opinion of a _small number_ of other nodes over multiple rounds, and possibly changes its own opinion. In the 70s voter models were introduced independently by Holley/Liggett and Clifford/Sudbury (<a href="https://projecteuclid.org/euclid.aop/1176996306">https://projecteuclid.org/euclid.aop/1176996306</a> and <a href="https://academic.oup.com/biomet/article-abstract/60/3/581/217208">https://academic.oup.com/biomet/article-abstract/60/3/581/217208</a>), and there has been an enormous amount of <a href="https://scholar.google.com/scholar?client=ubuntu&channel=fs&oe=utf-8&um=1&ie=UTF-8&lr&cites=196403151939999542">related work</a> since then.
 
-<img src="/static/q_oracle_assemblies.png"/>
+The introduction of a __voting mechanism__ brings multiple benefits:
 
-Arcu ac tortor dignissim convallis. Pellentesque habitant morbi tristique senectus et netus. Lectus vestibulum mattis ullamcorper velit. Turpis egestas sed tempus urna et pharetra. Egestas integer eget aliquet nibh praesent tristique. Cum sociis natoque penatibus et magnis dis parturient montes nascetur. Amet purus gravida quis blandit turpis cursus. Posuere urna nec tincidunt praesent semper feugiat. Pellentesque dignissim enim sit amet. Consectetur libero id faucibus nisl tincidunt eget nullam non. Donec ultrices tincidunt arcu non sodales neque sodales ut. Scelerisque in dictum non consectetur. Vitae suscipit tellus mauris a diam. Euismod nisi porta lorem mollis. Quam nulla porttitor massa id. Vitae justo eget magna fermentum. Ut sem nulla pharetra diam sit. Tempor nec feugiat nisl pretium fusce id.
+* Instead of waiting until the situation resolves itself with more and more issued transactions, we let the nodes talk to each other and resolve the situation proactively.
+* A node’s vote is weighted according to the amount of _mana_ it holds. Therefore good actors are able to have a larger influence on the network. 
+* Honest nodes secure the network by voting even if they are currently not issuing any transactions. Combined with the proposed Sybil protection mechanism (mana), this replaces the constant honest hashing power in blockchain, without any reliance on PoW.
+* The consensus process is decoupled from other aspects like tip selection or the structure of the Tangle.This makes for a modular DLT that can easily be adapted to fit future requirements. It also prevents all forms of attack that manipulate the Tangle’s structure to break the consensus mechanism, including the most dangerous attacks described in the white paper, like <a data-tip data-for='parasite_chain_attacks'>parasite chain attacks</a>.
 
-<img src="/static/q_oracle_assemblies.png"/>
+The main drawback of traditional voting schemes is that they do not scale very well; they require precise knowledge of all network participants and have a high message overhead. 
 
-Vel turpis nunc eget lorem. In dictum non consectetur a. Commodo ullamcorper a lacus vestibulum sed arcu non odio euismod. Donec pretium vulputate sapien nec sagittis. Molestie at elementum eu facilisis sed odio morbi quis. Lorem mollis aliquam ut porttitor. Morbi tincidunt augue interdum velit euismod in pellentesque massa placerat. Malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Consequat nisl vel pretium lectus quam id. Auctor eu augue ut lectus arcu bibendum at varius vel.
+We introduce Shimmer: a voting scheme that overcomes the issues faced by traditional voting schemes. 
 
+In the following sections, we describe the current state of voting research, by presenting two candidates for vote exchange within Shimmer, and how consensus can be achieved:
+
+* “Cellular Consensus”, which mimics the behavior in a cellular automaton, and 
+* “Fast Probabilistic Consensus”, which gives strong security guarantees using probability theory.
+
+# Module #5.1 - Shimmer
+The Shimmer voting scheme is named after an extraordinary behavior seen in nature. Bees <a href="http://digg.com/video/honeybee-nest-shimmering">“synchronize” their movement to defend themselves against predators.</a> They do this without any centralized entity, and only know when to “change their state” by observing the behavior of their __peers.__
+
+Individual autonomous agents that act according to some predefined rules can be found in many systems in nature, such as bees, ants, schools of fish and even in some areas of physics. Very simple rules can create incredibly complex features that, over time, manifest as __emergent__ properties of a system. The Shimmer consensus mechanism works in the same way. Instead of trying to reconstruct the opinion of every other node, we care only about the opinions of a very small subset of nodes and let consensus be formed __organically__ as an emergent property of the network.
+
+When a conflict arises under Shimmer the nodes iteratively exchange opinions about which of the conflicting transactions they prefer, until eventually a consensus is reached. The nodes obtain a global view of the preferred part of the Tangle, which is of crucial importance in guaranteeing consensus. At some point a node may further decide to mark its decision as _finalized._ This means it stops its involvement in the voting process, and will never deviate from that opinion again, even in the case of an overwhelming opinion change (due to an attack).
+
+As Shimmer will be used for consensus in the Tangle, ‘liking’ or ‘disliking’ a transaction has wider consequences. If a transaction is ‘liked’ by a node, then it must also ‘like’ all other transactions that are directly or indirectly referenced. Conversely, if a transaction is ‘disliked’, then no transaction that references this transaction can be ‘liked’.
+
+It is important to note that it is not necessary to vote on every transaction. Transactions that have no conflicts with any other transaction can be considered ‘liked’ based on local modifiers alone (i.e., after a certain time has elapsed). Votes are only required to resolve conflicts and edge cases.
+
+Nodes will reject votes that ‘prefer’ two conflicting <a data-tip data-for='subtangle'>subtangles</a> at the same time. This forces nodes to decide on a sole survivor. Nodes that violate this rule may be ignored and permanently dropped as neighbors. Also note that there is no reason why honest nodes would want to vote for two conflicting subtangles, since there is no mining reward that would incentivize them to do so.
+
+We are examining two different approaches to how voting is conducted and secured. These are:
+
+* Cellular Consensus
+* Fast Probabilistic Consensus
+
+These have different properties, but both show equally promising early results, and will soon be scrutinized on a public testnet. Fortunately, the protocol’s modularity makes it very easy to test both in parallel. 
+
+## Sub-Module #5.1.1 Cellular Consensus
+In Cellular Consensus the voting process is modelled as a <a href="https://en.wikipedia.org/wiki/Cellular_automaton">cellular automaton</a>, where nodes can be thought of as cells that monitor the states of their neighbors and adjust their opinion accordingly. The actual consensus algorithm is extremely simple and can be summarized in 5 lines of code:
+
+
+
+
+This describes a mechanism where nodes adopt the majority opinion of their neighbors, liking or disliking a transaction based on that majority.
+
+It is extremely fast and robust. The following animation depicts a simulation of 10,000 nodes reaching a consensus in the presence of 128 conflicting transactions (different colors represent different transactions): 
+
+<img src="/static/module_5.1.1.gif"/>
+
+In this example, the network reaches consensus in a matter of seconds.
+
+Increasing the number of nodes affects the time taken for transactions to propagate in the network, but does not affect the time to reach a consensus. Decisions are made locally and in parallel no matter how many nodes participate in the network. 
+
+The fact that votes are always exchanged with the same neighbors can represent a route of attack. We add security by incorporating _mana_-based reputation in the peering process: nodes will prefer neighbors with a similar reputation. This makes it expensive for attackers to even be considered as neighbors, and adds another incentive for nodes to attain a high reputation. The network becomes increasingly secure as the amount of _mana_ possessed by honest nodes grows naturally over time.
+
+### Gossip about Opinion: The organism’s immune system
+
+Treating nodes as cells of a living organism enables us to implement an ‘immune system’. This secures the network against attack by forcing participants to play by the rules, and provides a greater protection than traditional measures like Sybil protection. 
+Since all neighbors are selected randomly the process by which Shimmer reaches a consensus is highly probabilistic. But at node level, the Cellular Consensus is deterministic. This allows us to verify a node’s behavior if we know the opinion of its neighbors. Bad actors that violate the rules can therefore be detected (as demonstrated below) and evicted immediately, by any of their neighbors. 
+
+This idea can be formalized in the following protocol, which we call “Gossip about Opinion”:
+
+* At regular intervals, every node issues a “heartbeat” message to its neighbors. This contains its current opinion and the reason why it came to that opinion, i.e. its neighbors’ opinions in the previous round.
+* To compress the amount of exchanged data only the difference between consecutive heartbeats is sent i.e. only those transaction hashes whose ‘liked’ status has changed.
+* A node signs its heartbeat messages and opinions to guarantee authenticity.
+
+This heartbeat serves multiple purposes:
+
+* It forces nodes to make regular statements and remain active members of the network.
+* It is used to synchronize opinions between neighbors, allowing nodes to update their own opinion according to the previously described rules, without the need to proactively query other nodes.
+* It allows nodes to verify that their neighbors are honest - those that violate the protocol by changing their opinion can be evicted from the network immediately. Since the messages are signed, misbehaviour can be proven by tracing malicious messages back to the nodes that issued them.
+
+This approach has a number of compelling features that have not been seen in any other permissionless consensus mechanism: its asynchronous nature, the simplicity of its implementation, the efficiency of its message overhead, the speed at which it reaches consensus, and its attack resilience.
+
+While emergent phenomena are very common in biological systems and have proven to work well in practice, it is extremely difficult to model them mathematically due to their inherently chaotic and complex nature. The approach’s biggest drawback is therefore the complexity of formalizing its scientific proofs. It would be necessary to thoroughly study Cellular Consensus in a testnet environment before it could be deployed on the mainnet.
+
+### Sub-Module #5.1.2 - Fast Probabilistic Consensus
+
+To address the drawbacks of Cellular Consensus, we are simultaneously analyzing another voting process, for which we have already demonstrated mathematical models and proofs: the Fast Probabilistic Consensus.
+
+A formal description of Fast Probabilistic Consensus can be found in this <a href="https://arxiv.org/pdf/1905.10895.pdf">article</a>. The basic principle is quite similar to Cellular Consensus, but rather than asynchronously casting votes between neighbors in parallel, the voting process is split into separate rounds. In each round every node selects a new random subset of other nodes, and queries their current opinions. A node’s opinion is then formed according to the majority of returned opinions. However, the notion of “majority” here fluctuates. Instead of using a fixed threshold of 50%, we use a decision threshold derived from a <a href="https://eprint.iacr.org/2016/228.pdf">decentralized random number</a> sequence. Selecting a global but unpredictable threshold allows us to defend against an attacker that wants to delay consensus.
+
+This voting process has the crucial property of converging very quickly, even in scenarios where malicious nodes are voting according to the worst possible strategy. This has been formally proven in the paper, but the general principle can be explained as follows:
+
+* If an adversary knows the decision rules used by honest nodes, it can then predict their behaviour and adjust its strategy to stall the process indefinitely. 
+* Consider a situation in which the threshold at which honest nodes change their opinion is fixed. Now a malicious actor controlling a sufficient number of nodes can adjust the proportion of its nodes that state they liked / disliked a particular transaction to keep the network in a split (undecided) state. By using global random numbers to keep changing this threshold, we eliminate this possibility by making the rules consistent but unpredictable for the adversary.
+* It will therefore be practically impossible to keep the network in a split state for an extended time. It is important to note that these random numbers only have a relevant influence when the network is in an initial split state, and do not impact a network that is close to consensus.
+
+After a certain number of voting rounds in which a node does not change its opinion, the opinion can be considered finalized and does not require any further voting. This number can be chosen in such a way that the probability that the entire network has achieved consensus is arbitrarily high.
+
+Therefore Fast Probabilistic Consensus gives us an approach that is guaranteed to achieve consensus after a small number of rounds and with a small set of sampled nodes, thereby fulfilling the required conditions for any voting process using Shimmer. 
 
 `
 
 
 export const Future = () => markdown`
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et malesuada fames ac turpis egestas. Condimentum vitae sapien pellentesque habitant morbi tristique senectus. Imperdiet sed euismod nisi porta lorem mollis. Eu consequat ac felis donec et. Pellentesque id nibh tortor id aliquet lectus proin nibh. Non odio euismod lacinia at quis risus sed vulputate. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Consequat interdum varius sit amet. A iaculis at erat pellentesque adipiscing commodo elit. Urna et pharetra pharetra massa. Cursus in hac habitasse platea dictumst quisque sagittis purus sit. Magna fermentum iaculis eu non. Tincidunt praesent semper feugiat nibh sed pulvinar. Pellentesque habitant morbi tristique senectus et netus et malesuada. Senectus et netus et malesuada fames ac. Eget gravida cum sociis natoque.
+So far, we have discussed the direct implications of Coordicide for the IOTA network and its underlying technology. However, the Coordicide project enables much more than just a “better” network.
 
-Ut eu sem integer vitae. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Nam at lectus urna duis convallis convallis tellus id interdum. Cum sociis natoque penatibus et magnis dis parturient montes. Posuere sollicitudin aliquam ultrices sagittis. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Pellentesque pulvinar pellentesque habitant morbi tristique senectus. Suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Neque volutpat ac tincidunt vitae semper quis. Sapien pellentesque habitant morbi tristique senectus et.
+There are indirect implications that are equally fascinating, but which might not be immediately obvious. While this website does not have the scope to cover these implications in depth, we still want to offer some initial discussions around a few of the most important features. 
 
-<img src="/static/q_oracle_assemblies.png"/>
+### Reliable Timestamps
 
-Arcu ac tortor dignissim convallis. Pellentesque habitant morbi tristique senectus et netus. Lectus vestibulum mattis ullamcorper velit. Turpis egestas sed tempus urna et pharetra. Egestas integer eget aliquet nibh praesent tristique. Cum sociis natoque penatibus et magnis dis parturient montes nascetur. Amet purus gravida quis blandit turpis cursus. Posuere urna nec tincidunt praesent semper feugiat. Pellentesque dignissim enim sit amet. Consectetur libero id faucibus nisl tincidunt eget nullam non. Donec ultrices tincidunt arcu non sodales neque sodales ut. Scelerisque in dictum non consectetur. Vitae suscipit tellus mauris a diam. Euismod nisi porta lorem mollis. Quam nulla porttitor massa id. Vitae justo eget magna fermentum. Ut sem nulla pharetra diam sit. Tempor nec feugiat nisl pretium fusce id.
+Instead of directly voting on the fate of transactions, we may instead vote on the credibility of timestamps. Here ‘credible’ means that the difference between the issuing timestamp of a transaction and its arrival time to the nodes is not above a certain threshold.
 
-<img src="/static/q_oracle_assemblies.png"/>
+Whether a transaction is liked can then be locally derived i.e. by preferring the earliest transaction with a credible timestamp in the presence of conflicts. This has multiple benefits:
 
-Vel turpis nunc eget lorem. In dictum non consectetur a. Commodo ullamcorper a lacus vestibulum sed arcu non odio euismod. Donec pretium vulputate sapien nec sagittis. Molestie at elementum eu facilisis sed odio morbi quis. Lorem mollis aliquam ut porttitor. Morbi tincidunt augue interdum velit euismod in pellentesque massa placerat. Malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Consequat nisl vel pretium lectus quam id. Auctor eu augue ut lectus arcu bibendum at varius vel.
+* Even devices that do not have full knowledge about the ledger state can take part in the voting process. This is extremely beneficial for syncing nodes and the IoT environment where devices have unreliable connections.
+* Since the network can reach consensus on which transactions carry credible timestamps, we can start trusting timestamp values and establish a totally ordered tangle. When two transactions carry the “same” timestamp we simply sort them by their transaction hash.
 
+An inability to establish an overall order has been one of the biggest drawbacks of DAG-based DLTs in relation to “smart contracts”.
+
+### Multiple Tangles (domains)
+
+Without the Coordinator, it is possible to have multiple Tangles coexisting as separate domains. Each domain can implement a different logic for the transactions it processes (through different <a data-tip data-for='ixi'>IXI modules</a>) and associate a different meaning to the tokens it contains. Even though these domains do not necessarily share the same rules, it is still possible that transactions from one domain refer to data from another domain.
+
+This will enable us to model extremely complex use cases with very simple building blocks. For example, resource tokens in one domain can represent the right to access certain resources, whereas asset tokens in another domain can represent the ownership of a share of a certain asset.
+
+In addition to adding a lot of flexibility to IOTA, the modular approach enables a way of sharding network activity into separate domains, and thereby further increase IOTA’s scalability. For example, a “data-only” Tangle that contains only data transactions could be separated from a Tangle that contains only value transactions. Since data transactions can never be conflicting, transactions in this Tangle could “confirm” instantly without the involvement of any consensus mechanism. This would enable a wide array of IoT use cases that depend on immutable data.
+
+### Different data structures for every domain
+
+Since the Tangle is the most generic form of DAG — with bundles being able to reference 1 to n other transactions — it will now be possible to build completely different data structures tailored to the specific needs of a use case. By implementing a different tip selection algorithm, one could build a blockchain-like structure where the trunk and branch of a transaction always reference the previous transaction. Similarly structures like “block lattices” could easily be emulated using a different tip selection algorithm. There is really no limit to the possibilities. The modular approach guarantees the ultimate freedom of the protocol.
+
+### Additional rules encoded in the signature message fragment
+
+Since every transaction carries a “signature message fragment” that can contain arbitrary data, it is possible to encode more complex behaviors (such as certain conditions for the application of a transaction, or side-effects that are triggered automatically). These can then be parsed and applied by the nodes of that specific domain.
 
 `
 
 export const Conclusion = () => markdown`
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et malesuada fames ac turpis egestas. Condimentum vitae sapien pellentesque habitant morbi tristique senectus. Imperdiet sed euismod nisi porta lorem mollis. Eu consequat ac felis donec et. Pellentesque id nibh tortor id aliquet lectus proin nibh. Non odio euismod lacinia at quis risus sed vulputate. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Consequat interdum varius sit amet. A iaculis at erat pellentesque adipiscing commodo elit. Urna et pharetra pharetra massa. Cursus in hac habitasse platea dictumst quisque sagittis purus sit. Magna fermentum iaculis eu non. Tincidunt praesent semper feugiat nibh sed pulvinar. Pellentesque habitant morbi tristique senectus et netus et malesuada. Senectus et netus et malesuada fames ac. Eget gravida cum sociis natoque.
-
-Ut eu sem integer vitae. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Nam at lectus urna duis convallis convallis tellus id interdum. Cum sociis natoque penatibus et magnis dis parturient montes. Posuere sollicitudin aliquam ultrices sagittis. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Pellentesque pulvinar pellentesque habitant morbi tristique senectus. Suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Neque volutpat ac tincidunt vitae semper quis. Sapien pellentesque habitant morbi tristique senectus et.
-
-<img src="/static/q_oracle_assemblies.png"/>
-
-Arcu ac tortor dignissim convallis. Pellentesque habitant morbi tristique senectus et netus. Lectus vestibulum mattis ullamcorper velit. Turpis egestas sed tempus urna et pharetra. Egestas integer eget aliquet nibh praesent tristique. Cum sociis natoque penatibus et magnis dis parturient montes nascetur. Amet purus gravida quis blandit turpis cursus. Posuere urna nec tincidunt praesent semper feugiat. Pellentesque dignissim enim sit amet. Consectetur libero id faucibus nisl tincidunt eget nullam non. Donec ultrices tincidunt arcu non sodales neque sodales ut. Scelerisque in dictum non consectetur. Vitae suscipit tellus mauris a diam. Euismod nisi porta lorem mollis. Quam nulla porttitor massa id. Vitae justo eget magna fermentum. Ut sem nulla pharetra diam sit. Tempor nec feugiat nisl pretium fusce id.
-
-<img src="/static/q_oracle_assemblies.png"/>
-
-Vel turpis nunc eget lorem. In dictum non consectetur a. Commodo ullamcorper a lacus vestibulum sed arcu non odio euismod. Donec pretium vulputate sapien nec sagittis. Molestie at elementum eu facilisis sed odio morbi quis. Lorem mollis aliquam ut porttitor. Morbi tincidunt augue interdum velit euismod in pellentesque massa placerat. Malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Consequat nisl vel pretium lectus quam id. Auctor eu augue ut lectus arcu bibendum at varius vel.
-
+The goal of this website has been to introduce the concepts behind Coordicide and its various modules. The following list summarizes the implications of these modules, explaining the properties a Coordinatorless network will bring to the table:
 
 `
 
@@ -417,163 +536,5 @@ The process of selecting previous transactions to be referenced by a new transac
 <p>
 A message that transfers funds or information between two nodes. A transaction is referred to as “solid” if its entire history is known.
 </p>
-
-`
-
-
-
-
-
-
-
-
-
-
-
-
-
-export const P1 = () => markdown`
-
-_At IOTA, we are <span className="myclass">preparing</span> to take the most significant step to date in the maturity of the protocol. This step in effect realizes the dream of a permissionless and scalable distributed ledger technology (DLT). We refer to this event as Coordicide (death of the Coordinator)._
-
-`
-
-export const P2 = () => markdown`
-
-# Why IOTA
-
-IOTA’s goal is to establish an __innovative DLT for the Internet of Things__ (IoT). To achieve this goal, the IOTA Foundation has defined the following characteristics as fundamental to its vision for a modular protocol:
-* __Scalable__. We want to be able to elaborate and process a very large number of transactions per second, not constrained by protocol limitations.
-* __Lightweight__. Low-power devices should be able to directly participate in the network.
-* __Feeless__. Generating transactions does not require any network fees, which paves the way to micro-transactions, a foundational aspect of the IoT world.
-
-`
-
-export const P3 = () => markdown`
-
-# IOTA as scalable DLT
-
-Traditional DLTs have limiting factors that make them unsuitable for attaining IOTA’s goal.
-
-The first limit stems from the blockchain data structure, which inherently limits the speed of the network. This limit is commonly referred to as the “blockchain bottleneck.” 
-
-<img src="/static/q_oracle_assemblies.png"/>
-
-On the other hand, the core __data layer__ in IOTA is, in theory, __infinitely scalable__. This layer is subject to a simple rule on the relationship among transactions: Each transaction references and approves two existing transactions. This rule defines the data structure of the Tangle, which in mathematical terms is known as a directed acyclic graph (DAG).
-
-(Note: We say “infinitely scalable in theory” because any digital system is ultimately constrained by hardware and networking limits.)
-
-<img src="/static/q_oracle_assemblies.png"/>
-
-The second limit can be found in the consensus mechanism. Nakamoto consensus splits the network into miners and users. Miners use large amounts of energy to complete the Proof-of-Work (PoW) that chains together the blocks. To compensate the miners for this work, users pay fees to send transactions. Fees are a barrier to a machine-to-machine economy, in which micropayment values are often less than the fee requirements.
-
-<img src="/static/q_oracle_assemblies.png"/>
-
-Conversely, in IOTA there is no distinction between miners and users, and all nodes can participate in the consensus. The definition of the __consensus layer__ is at the core of IOTA and describes how nodes agree on which transactions are trustworthy. In the current IOTA implementation of the Tangle, nodes trust transactions referenced and approved by “milestones.” Milestones are normal transactions issued by the Coordinator. The use of this centralized “finality device” has been necessary to strengthen the security of the network during its initial phase.
-
-After Coordicide, however, __IOTA’s feeless network will continue to enable micropayments, while preserving decentralization and ledger security.__
-
-`
-
-export const P4 = () => markdown`
-
-# Modularity
-
-## Subtitle
-
-The idea of a modular DLT is often overlooked. It is somehow assumed that because DLTs are software, that they are inherently upgradeable. This is true in a sense, but to fully realize modularity in a DLT, it must be designed as such from the ground up. We feel that the freedom to optimize and upgrade any part of the protocol at any time is critical to the long-term success of such a rapidly-advancing technology. 
-
-To give IOTA the freedom to be optimized and upgraded at any time, our Coordicide proposal renews the IOTA implementation as a modular DLT. Our Coordicide team has been developing several modules that __remove the need for the Coordinator__ in IOTA’s consensus layer. These modules introduce additional side benefits:
-* Decreased transaction finality times (within seconds)
-* Reduced need for promotions and reattachments
-* Introduction of an auto peering mechanism
-* Message overhead reduction
-
-On the following pages, we provide an overview of the different modules. First, we create a mechanism to associate an identity to each node. This identity will be subsequently used to automatically build a small world network through auto peering and to control the transaction rate depending on the network limitations. The core of the Coordicide, however, is our improved consensus mechanism: We propose a voting scheme that complements the tip selection algorithm to maximize decentralization and security. Voting is used by the nodes to resolve conflicts by asking the opinion of the neighbors on the ledger status. In the following, we will discuss two proposed (non-mutually exclusive) implementations, namely the <a href="https://iota.org">Fast Probabilistic Consensus</a> and the Cellular Automata.
-
-We refer the interested reader to our <a href="https://iota.org">Coordicide white paper</a>, where we further develop the ideas presented in this website.
-
-Please be aware that although we are confident in the proposed solutions, we still need to complete simulations and further research. As a result, specific modules may change by the time we release them on the Mainnet. That said, what follows is a map of the basic building blocks for a post-coordinator IOTA network. 
-
-We share your excitement about seeing these ideas come to fruition in the months ahead! As such, we look forward to sharing new simulation results as they become available, as well as community participation in optimizing the solution. 
-
-`
-
-export const P5 = () => markdown`
-
-# Consensus in Post-Coordinator IOTA
-
-## Preliminaries
-
-The goal of Coordicide is to build a network that can reach a consensus without the Coordinator. With this goal we must also ensure the network has the following characteristics:
-* _Scalability_: The rate of transactions in the network is not bounded by protocol limitations.
-* _Security_: An attacker cannot influence the consensus.
-* _Decentralization_: All honest nodes can be part of the consensus process.
-
-Current DLT solutions can guarantee only two out of three characteristics at the same time. This problem is known as the “<a href="https://github.com/ethereum/wiki/wiki/Sharding-FAQ">scalability trilemma</a>.”
-
-An example of the trilemma is in PoW-based blockchains like Bitcoin. These blockchains offer security and decentralization, but lack scalability:
-* _Security_: Miners complete PoW to chain together blocks of transactions. All miners attach their blocks to the longest chain (“longest chain wins” rule).
-* _Decentralization_: Miners are distributed across the network. No single miner (or mining pool) controls the majority of the hashing power.
-
-All blocks on the Bitcoin blockchain have a limited size. This block size limit reduces the rate of transactions and affects scalability. Furthermore, miners choose the transactions with the highest reward (transaction fees) to include in their blocks. The revolutionary nature of this solution should not be understated -- but at the same time, we cannot overstate its highly negative impact the theoretical network throughput of any PoW-based DLT.
-
-Unlike Nakamoto consensus, with the Coordinator IOTA offers security and scalability, but lacks decentralization:
-* _Scalability_: Each transaction references and approves two previous ones. You can attach transactions to the Tangle anywhere and at any time. No miners are involved.
-* _Security_: The Coordinator secures the network by sending milestone transactions. Nodes consider transactions trustworthy when they are referenced and approved by a valid milestone.
-
-The white paper version of the Tangle allows users to attach transactions to any part of the Tangle. The selected part is called a subtangle.
-
-Users can attach transactions to a subtangle thanks to the DAG graph structure, in which a new transaction approves two previous ones. This approval process increases the selected subtangle’s cumulative weight. (A concept that's analogous to adding to the “longest chain".) By providing the option for multiple attachment sites and eliminating the need for blocks, the Tangle guarantees scalability.
-
-But, because the Coordinator is a single client, it is considered centralized.
-
-## An improved Tangle: decentralized and secure!
-
-The naive remotion of the Coordinator is not sufficient for achieving decentralization. In fact, the consensus mechanism described in the IOTA white paper is based on the __assiduous honest majority__ assumption, which requires that the majority of transactions always come from honest network participants, i.e., honest actors need to own a majority of the hashing power and to constantly produce transactions. The implication is that honest nodes would continuously need to send transactions, regardless of whether they are actually using the network or not. Since IOTA does not have miners, it also has no concept of constant, honest hashing power securing the Tangle against attackers in the absence of massive adoption.
-
-The goal of Coordicide is to solve the scalability trilemma by providing a decentralized, secure network while preserving a high transaction rate. The core of the solution is a __voting mechanism__ where nodes ask the opinion of their neighbouring nodes in order to decide which transactions should be part of the Tangle, and which ones should be orphaned.
-
-To get rid of the Coordinator, a number of challenges must be solved. Due to the complexity of the work, we break down the Coordicide into the subsequent steps. These steps are a way to present the Coordicide in a simple fashion to a non-technical audience. Furthermore, they make our Coordicide proposal __modular__, where each step can be replaced independently of the others, if new research unveils more optimal solutions.
-
-`
-
-export const P6 = () => markdown`
-
-# The Modules
-
-## Back to the drawing board: What are we trying to solve?
-
-Let’s start with asking two very fundamental questions:
-* _What is it that we try to achieve when we talk about “the network reaching consensus”?
-The answer is actually really simple: We are interested in the network adopting the opinion of the majority of honest full nodes._
-* _Since IOTA does not have to choose a “leader” to mine blocks, what are we actually voting on?
-The answer is again relatively simple: We are voting on which part of the Tangle is the preferred one when selecting tips (the non-preferred part will be orphaned)._
-
-If we look at the first question, we immediately realize that a traditional PoW-based DLT is not well-suited to achieve our requirements, as PoW favors hashing power and an attacker can influence the consensus by issuing malicious transactions through honest nodes, without even running a node himself. The second question also poses problems for PoW-based DLTs, since casting votes on “where to attach” by “attaching somewhere” will inevitably lead to situations where honest actors will vote on the wrong part of the Tangle (accidentally), which will then force them to reattach their transactions.
-
-`
-
-export const P7 = () => markdown`
-
-# IOTA’s Diverse Future 
-
-We hope that after reading this website, and also the technical papers, you now have a much greater understanding of the nature of the challenges ahead, but that you also share our enthusiasm about our path forward. 
-
-This goal of this website has been to introduce the Cooridicide to the public, including its individual modules. What we have yet to offer is a detailed response to the perfectly natural question of: “What does this all mean?” The reason for this is twofold. First, as an organization, our top priority at this time remains the achievement of the decentralized network we have described. Second, the truth of the matter is that no one fully understands the potential of IOTA as a modular DLT with this implementation of Coordicide. We want to offer some initial “food for thought” around this topic, which we will follow up on in a later blog update.
-
----
-
-In distributed computing:
-
-> **A quorum** is the minimum number of votes that a distributed transaction has to obtain in order to be allowed to perform an operation in a <a href="https://en.wikipedia.org/wiki/Distributed_system" target="_blank">distributed system</a>.
-
-<img src="/static/q_oracle_assemblies.png"/>
-
-1.  If rewards or voting power were distributed evenly among oracles (equal parts per oracle), a single oracle could impersonate multiple oracles to conduct a Sybil attack. To prevent this, Qubic requires oracles to participate in a resource test phase before the assembly starts processing qubics.
-
-2.  If results were posted openly, an oracle could cheat by not doing any processing and simply copy the quorum result that is forming. We call this a classroom attack. To prevent this, results are posted in two steps. Oracles first post a commit transaction that uniquely identifies the oracle and their result, but without giving away the answer. Only later do they post the reveal transaction, which the consumers read to find the results.
-
-As imagined in the Qubic <a href="https://qubic.iota.org/static/teaser_720p.mp4" target="_blank">teaser video</a>, here is a set of qubics (specifically: an oracle machine, an outsourced computation, and a smart contract) which work together and evolve over time to do something useful - in this case, foreign exchange trading.
 
 `
