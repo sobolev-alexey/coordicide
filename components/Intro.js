@@ -15,45 +15,50 @@ export default () => {
     const { showMenu } = useContext(MenuContext)
 
     return (
-        <div className="intro-wrapper">
-            <ModalVideo 
-                channel='youtube' 
-                autoplay
-                allowFullScreen
-                isOpen={showVideo} 
-                videoId='guNNqEeu6gY' 
-                onClose={() => setShowVideo(false)} 
-            />
-            <div className="intro">
-                <PlayButton onClick={() => setShowVideo(true)} />
-                <CascadingAnimation />
-                <div className="intro-blur-wrapper">
-                    <Shape className="intro-shape-outer" color="#ffffff" width="383px" height="434px" />
-                    <Shape className="intro-shape-inner" color="rgba(232, 242, 248, 0.6)" width="193px" height="218px" />
-                    <Text className="title">Coordicide</Text>
-                    <Text className="subtitle">THE next step IN IOTA’s EVOLUTION</Text>
+        <React.Fragment>
+            <div className="intro-wrapper">
+                <ModalVideo 
+                    channel='youtube' 
+                    autoplay
+                    allowFullScreen
+                    isOpen={showVideo} 
+                    videoId='guNNqEeu6gY' 
+                    onClose={() => setShowVideo(false)} 
+                />
+                <div className="intro">
+                    <PlayButton onClick={() => setShowVideo(true)} />
+                    <CascadingAnimation />
+                    <div className="intro-blur-wrapper">
+                        <Shape className="intro-shape-outer" color="#ffffff" width="383px" height="434px" />
+                        <Shape className="intro-shape-inner" color="rgba(232, 242, 248, 0.6)" width="193px" height="218px" />
+                        <Text className="title">Coordicide</Text>
+                        <Text className="subtitle">THE next step IN IOTA’s EVOLUTION</Text>
+                    </div>
+                </div>
+                <Text className="subtitle">Our goal</Text>
+                <Text>The IOTA Foundation is preparing to take its most important step to date in the maturity of the IOTA protocol — realizing the dream of a permissionless and scalable distributed ledger technology (DLT). We refer to this event as Coordicide: the death of the Coordinator</Text>
+                <div className="intro-buttons-wrapper">
+                    <Link prefetch href="/scalability">
+                        <Button
+                            className="large primary intro-page"
+                            icon="hexagon"
+                        >
+                            Get started
+                        </Button>
+                    </Link>
+                    <Button
+                        className="large secondary intro-page"
+                        icon="search"
+                        onClick={showMenu}
+                    >
+                        View contents
+                    </Button>
                 </div>
             </div>
-            <Text className="subtitle">Our goal</Text>
-            <Text>The IOTA Foundation is preparing to take its most important step to date in the maturity of the IOTA protocol — realizing the dream of a permissionless and scalable distributed ledger technology (DLT). We refer to this event as Coordicide: the death of the Coordinator</Text>
-            <div className="intro-buttons-wrapper">
-                <Link prefetch href="/scalability">
-                    <Button
-                        className="large primary intro-page"
-                        icon="hexagon"
-                    >
-                        Get started
-                    </Button>
-                </Link>
-                <Button
-                    className="large secondary intro-page"
-                    icon="search"
-                    onClick={showMenu}
-                >
-                    View contents
-                </Button>
-            </div>
-        </div>
+            <img className="colored asset1" src="../static/Group.png"/>
+            <img className="colored asset2" src="../static/Blur.png"/>
+            <img className="colored asset3" src="../static/pink.png"/>
+        </React.Fragment>
     )
 }
 
