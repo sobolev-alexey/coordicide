@@ -40,10 +40,10 @@
     transition: all 0.2s ease-in-out;
 
     &:hover {
-        color: $q-purple;
+        color: $q-teal;
     }
 
     @media (max-width: 580px) {
-        margin-right: 40px;
+        margin-right: 35px;
     }
 }

@@ -186,12 +186,12 @@
             font-size: 16px;
         }
 
-        p, ul, li {
-            font-size: 18px;
-        }
-
         hr {
             margin: 20px 0 30px 0;
+        }
+
+        p, ul, ol, li {
+            line-height: 24px;
         }
     }
 
@@ -230,11 +230,24 @@
     }
 }
 
-.animation-wrapper.module {
+.animation-wrapper {
     text-align: center;
+}
 
+.animation-wrapper.module, 
+.animation-wrapper.module51 {
     img {
         width: 350px;
     }
+}
+
+.animation-wrapper.post-coordinator {
+    img {
+        width: 250px;
+    }
+}
+
+img.conclusion-team {
+    width: 250px;
 }
 
