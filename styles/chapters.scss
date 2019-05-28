@@ -1,32 +1,64 @@
 @import '../styles/colors';
 
 .chapters-outer-wrapper {
-    background-color: rgb(196, 196, 196);
+    background-color: #ffffff;
     overflow: hidden;
 
-    // &.chapter1 {
-    //     background: url('/static/chapters/Chapter_1.svg') -60px -200px no-repeat;
-    // }
+    &.chapter1, &.glossary {
+        background: url('/static/chapters/Chapter_1.png') no-repeat;
+    }
 
-    // &.chapter2 {
-    //     background: url('/static/chapters/Chapter_2.svg') -60px -200px no-repeat;
-    // }
+    &.chapter2 {
+        background: url('/static/chapters/Chapter_2.png') no-repeat;
+    }
 
-    // &.chapter3 {
-    //     background: url('/static/chapters/Chapter_3.svg') -60px -200px no-repeat;
-    // }
+    &.chapter3 {
+        background: url('/static/chapters/Chapter_3.png') no-repeat;
+    }
 
-    // &.chapter4 {
-    //     background: url('/static/chapters/Chapter_4.svg') -60px -200px no-repeat;
-    // }
+    &.chapter4 {
+        background: url('/static/chapters/Chapter_4.png') no-repeat;
+    }
 
-    // &.chapter5 {
-    //     background: url('/static/chapters/Chapter_4.svg') -60px -200px no-repeat;
-    // }
+    &.chapter5 {
+        background: url('/static/chapters/Chapter_5.png') no-repeat;
+    }
 
-    // &.chapter6 {
-    //     background: url('/static/chapters/Chapter_4.svg') -60px -200px no-repeat;
-    // }
+    &.chapter6 {
+        background: url('/static/chapters/Chapter_6.png') no-repeat;
+    }
+
+    &.module1 {
+        background: url('/static/chapters/Module_1.png') no-repeat;
+    }
+
+    &.module2 {
+        background: url('/static/chapters/Module_2.png') no-repeat;
+    }
+
+    &.module3 {
+        background: url('/static/chapters/Module_3.png') no-repeat;
+    }
+
+    &.module4 {
+        background: url('/static/chapters/Module_4.png') no-repeat;
+    }
+
+    &.module5 {
+        background: url('/static/chapters/Module_5.png') no-repeat;
+    }
+
+    &.module51 {
+        background: url('/static/chapters/Module_5_1.png') no-repeat;
+    }
+
+    &.module511 {
+        background: url('/static/chapters/Module_5_1_1.png') no-repeat;
+    }
+
+    &.module512 {
+        background: url('/static/chapters/Module_5_1_2.png') no-repeat;
+    }
 
     @media (max-width: 768px) {
         overflow-y: visible;
@@ -38,12 +70,12 @@
     max-width: 800px;
     width: 100%;
     float: right;
-    padding: 200px 0 0 100px;
+    padding: 200px 100px;
     height: 100vh;
     background-color: #ffffff;
 
     @media (max-width: 768px) {
-        padding: 50px 0 0 100px;
+        padding: 50px 100px;
     }
 
     .label {

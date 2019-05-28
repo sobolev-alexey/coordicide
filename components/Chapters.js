@@ -28,7 +28,7 @@ export default ({ closeNav }) => {
                 <Text className="subtitle label">Chapter</Text>
                 <div className="chapters-wrapper">
                     <Link prefetch href="/">
-                        <div className="chapter intro">
+                        <div className="chapter intro" onMouseEnter={() => setBackground('chapter1')}>
                             <Text className="title">{' '}</Text>
                             <Text className="subtitle">Introduction</Text>
                             <Text className="read">Read</Text>
@@ -69,8 +69,8 @@ export default ({ closeNav }) => {
                         </Link>
 
                         <div className={classNames('subtopics', { 'enabled': showSubmenu })}>
-                            <Link prefetch href="/module1" onMouseEnter={() => setBackground('module1')}>
-                                <div className="subtopic">
+                            <Link prefetch href="/module1">
+                                <div className="subtopic" onMouseEnter={() => setBackground('module1')}>
                                     <Text className="title">1</Text>
                                     <Text className="subtitle">Node identities and mana</Text>
                                     <Text className="read">Read</Text>
@@ -143,7 +143,7 @@ export default ({ closeNav }) => {
                         </div>
                     </Link>
                     <Link prefetch href="/glossary">
-                        <div className="chapter">
+                        <div className="chapter" onMouseEnter={() => setBackground('glossary')}>
                             <Text className="title">{' '}</Text>
                             <Text className="subtitle">Glossary</Text>
                             <Text className="read">Read</Text>
