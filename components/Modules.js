@@ -23,7 +23,6 @@ export default () => {
             <div className="modules-heading-wrapper">
                 <Shape className="modules-shape" color="rgba(232, 242, 248, 0.4)" width="193px" height="226px" />
                 <Text className="title extra-large">BUILDING BLOCKS</Text>
-                <Text className="subtitle">of IOTA</Text>
             </div>
             <div className="module">
                 <Lottie 
@@ -46,7 +45,7 @@ export default () => {
                 />
                 <Text className="subtitle">Module 2</Text>
                 <Text className="title">Auto-Peering</Text>
-                <Text>Connect to the network automatically, reducing the effort involved in running a node.</Text>
+                <Text>Connect to the network automatically, simplifying node setup and maintenance.</Text>
                 <Link prefetch href="/module2">
                     <a className="btn mini">Details</a>
                 </Link>
@@ -59,7 +58,7 @@ export default () => {
                 />
                 <Text className="subtitle">Module 3</Text>
                 <Text className="title">Spam Protection</Text>
-                <Text>Enable low-powered IoT devices to access the network through our adaptive rate control mechanism.</Text>
+                <Text>Enables low-powered IoT devices to access the network through an adaptive rate control mechanism.</Text>
                 <Link prefetch href="/module3">
                     <a className="btn mini">Details</a>
                 </Link>
@@ -72,7 +71,7 @@ export default () => {
                 />
                 <Text className="subtitle">Module 4</Text>
                 <Text className="title">Tip Selection</Text>
-                <Text>Ensure your transaction gets picked up by the network and improve transaction times through an optimized tip selection algorithm.</Text>
+                <Text>An optimized tip selection algorithm improves confirmation times and ensures transaction confirmation.</Text>
                 <Link prefetch href="/module4">
                     <a className="btn mini">Details</a>
                 </Link>
@@ -85,7 +84,7 @@ export default () => {
                 />
                 <Text className="subtitle">Module 5</Text>
                 <Text className="title">Shimmer</Text>
-                <Text>Reach a consensus in seconds through a revolutionary voting module which leverages proactive communication in the network. This allows for irreversible transactions to be made within seconds.</Text>
+                <Text>The revolutionary voting module reaches a consensus in seconds. By leveraging proactive communication in the network it enables near-instant irreversible transactions.</Text>
                 <Link prefetch href="/module5">
                     <a className="btn mini">Details</a>
                 </Link>
