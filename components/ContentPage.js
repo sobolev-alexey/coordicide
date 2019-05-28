@@ -15,7 +15,7 @@ import {
 } from './Content'
 import '../styles/content-page.scss'
 
-export default ({ page, next = {}, prev = {} }) => {
+export default ({ page, next = {}, prev = {}, additionalContent = null }) => {
     function getContent(link) {
         switch (link) {
             case 'scalability': return <Scalability />;
@@ -45,16 +45,17 @@ export default ({ page, next = {}, prev = {} }) => {
             </div>
             <div className="content">
                 {getContent(page.link)}
+                { additionalContent }
             </div>
             <div className="content-footer">
                 {
-                    next && next.title ? (
-                        <NextPage page={next.link} title={next.title} />
+                    prev && prev.title ? (
+                        <PreviousPage page={prev.link} title={prev.title} />
                     ) : null
                 }
                 {
-                    prev && prev.title ? (
-                        <PreviousPage page={prev.link} title={prev.title} />
+                    next && next.title ? (
+                        <NextPage page={next.link} title={next.title} />
                     ) : null
                 }
             </div>
