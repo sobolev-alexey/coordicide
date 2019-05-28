@@ -69,7 +69,7 @@ export default ({ closeNav }) => {
                         </Link>
 
                         <div className={classNames('subtopics', { 'enabled': showSubmenu })}>
-                            <Link prefetch href="/module1">
+                            <Link prefetch href="/module1" onMouseEnter={() => setBackground('module1')}>
                                 <div className="subtopic">
                                     <Text className="title">1</Text>
                                     <Text className="subtitle">Node identities and mana</Text>
@@ -77,49 +77,49 @@ export default ({ closeNav }) => {
                                 </div>
                             </Link>
                             <Link prefetch href="/module2">
-                                <div className="subtopic">
+                                <div className="subtopic" onMouseEnter={() => setBackground('module2')}>
                                     <Text className="title">2</Text>
                                     <Text className="subtitle">Secure Auto-peering</Text>
                                     <Text className="read">Read</Text>
                                 </div>
                             </Link>
                             <Link prefetch href="/module3">
-                                <div className="subtopic">
+                                <div className="subtopic" onMouseEnter={() => setBackground('module3')}>
                                     <Text className="title">3</Text>
                                     <Text className="subtitle">Spam protection</Text>
                                     <Text className="read">Read</Text>
                                 </div>
                             </Link>
                             <Link prefetch href="/module4">
-                                <div className="subtopic">
+                                <div className="subtopic" onMouseEnter={() => setBackground('module4')}>
                                     <Text className="title">4</Text>
                                     <Text className="subtitle">Tip Selection Algorithm</Text>
                                     <Text className="read">Read</Text>
                                 </div>
                             </Link>
                             <Link prefetch href="/module5">
-                                <div className="subtopic">
+                                <div className="subtopic" onMouseEnter={() => setBackground('module5')}>
                                     <Text className="title">5</Text>
                                     <Text className="subtitle">Proactive conflict resolution</Text>
                                     <Text className="read">Read</Text>
                                 </div>
                             </Link>
                             <Link prefetch href="/module5.1">
-                                <div className="subtopic">
+                                <div className="subtopic" onMouseEnter={() => setBackground('module51')}>
                                     <Text className="title">5.1</Text>
                                     <Text className="subtitle">Shimmer</Text>
                                     <Text className="read">Read</Text>
                                 </div>
                             </Link>
                             <Link prefetch href="/module5.1.1">
-                                <div className="subtopic">
+                                <div className="subtopic" onMouseEnter={() => setBackground('module511')}>
                                     <Text className="title">5.1.1</Text>
                                     <Text className="subtitle">Cellular Consensus</Text>
                                     <Text className="read">Read</Text>
                                 </div>
                             </Link>
                             <Link prefetch href="/module5.1.2">
-                                <div className="subtopic">
+                                <div className="subtopic" onMouseEnter={() => setBackground('module512')}>
                                     <Text className="title">5.1.2</Text>
                                     <Text className="subtitle">Fast Probabilistic Consensus</Text>
                                     <Text className="read">Read</Text>
@@ -129,14 +129,14 @@ export default ({ closeNav }) => {
                     </div>
                     
                     <Link prefetch href="/future">
-                        <div className="chapter">
+                        <div className="chapter" onMouseEnter={() => setBackground('chapter5')}>
                             <Text className="title">05</Text>
                             <Text className="subtitle">The Future</Text>
                             <Text className="read">Read</Text>
                         </div>
                     </Link>
                     <Link prefetch href="/conclusion">
-                        <div className="chapter">
+                        <div className="chapter" onMouseEnter={() => setBackground('chapter6')}>
                             <Text className="title">06</Text>
                             <Text className="subtitle">Conclusion</Text>
                             <Text className="read">Read</Text>

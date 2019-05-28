@@ -4,6 +4,30 @@
     background-color: rgb(196, 196, 196);
     overflow: hidden;
 
+    // &.chapter1 {
+    //     background: url('/static/chapters/Chapter_1.svg') -60px -200px no-repeat;
+    // }
+
+    // &.chapter2 {
+    //     background: url('/static/chapters/Chapter_2.svg') -60px -200px no-repeat;
+    // }
+
+    // &.chapter3 {
+    //     background: url('/static/chapters/Chapter_3.svg') -60px -200px no-repeat;
+    // }
+
+    // &.chapter4 {
+    //     background: url('/static/chapters/Chapter_4.svg') -60px -200px no-repeat;
+    // }
+
+    // &.chapter5 {
+    //     background: url('/static/chapters/Chapter_4.svg') -60px -200px no-repeat;
+    // }
+
+    // &.chapter6 {
+    //     background: url('/static/chapters/Chapter_4.svg') -60px -200px no-repeat;
+    // }
+
     @media (max-width: 768px) {
         overflow-y: visible;
         overflow-x: visible;
