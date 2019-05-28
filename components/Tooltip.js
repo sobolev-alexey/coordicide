@@ -8,7 +8,7 @@ import '../styles/tooltip.scss'
 export default ({ tooltipId }) => {
     const tooltip = tooltips[tooltipId]
     return (
-        <ReactTooltip id={tooltipId} aria-haspopup='true' place='bottom' effect='solid'>
+        <ReactTooltip id={tooltipId} >
             <div className="tooltip-wrapper">
                 <Shape className="shape tooltip-top-shape" color="#F1F7FB" width="180px" height="216px" />
                 <Text className="subtitle">{tooltip.header}</Text>
