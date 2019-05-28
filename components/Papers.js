@@ -18,21 +18,21 @@ export default () => (
                 <FontAwesomeIcon icon={faFileInvoice} />
                 Download
             </a>
-            <Text className="micro with-dot">Updated 23 May 2019</Text>
+            <Text className="micro with-dot">Updated 28 May 2019</Text>
         </div>
         <span className="separator" />
         <div className="paper">
-            <Text className="title">FPC PAPEr 1.0</Text>
+            <Text className="title">FPC PAPER 1.0</Text>
             <Text className="mini">Fast Probabilistic Consensus Paper</Text>
             <a 
                 className="btn medium secondary"
                 download
-                href="https://github.com/iotaledger/data-marketplace/raw/develop/Blueprint%20-%20Data%20Marketplace.pdf"
+                href="https://arxiv.org/pdf/1905.10895.pdf"
             >
                 <FontAwesomeIcon icon={faFileInvoice} />
                 Download
             </a>
-            <Text className="micro with-dot">Updated 23 May 2019</Text>
+            <Text className="micro with-dot">Updated 28 May 2019</Text>
         </div>
     </div>
 )
