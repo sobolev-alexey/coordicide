@@ -27,6 +27,8 @@ export default () => {
                     </ul>
                     <p>The main drawback of traditional voting schemes is that they do not scale very well; they require precise knowledge of all network participants and have a high message overhead.</p>
                     <p>We introduce Shimmer: a voting scheme that overcomes the issues faced by traditional voting schemes.</p>
+                    
+                    <img src="../static/modules/shimmer.gif" />
                     <p>In the following sections, we describe the current state of voting research, by presenting two candidates for vote exchange within Shimmer, and how consensus can be achieved:</p>
                     <ul>
                         <li>“Cellular Consensus”, which mimics the behavior in a cellular automaton, and</li>
