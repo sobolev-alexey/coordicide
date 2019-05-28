@@ -18,10 +18,10 @@ export default class MyDocument extends Document {
                     />
                     <meta property="og:type" content="video.other" />
                     <meta property="og:url" content="https://coordicide.iota.org" />
-                    {/* <meta
+                    <meta
                         property="og:image"
-                        content="https://coordicide.iota.org/static/bg-coordicide.jpg"
-                    /> */}
+                        content="https://coordicide.iota.org/static/coordicide.png"
+                    />
                     <meta
                         property="og:description"
                         content="The Coordicide. Realizing IOTA’s vision of a permissionless and scalable distributed ledger technology"
