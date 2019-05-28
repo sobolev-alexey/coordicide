@@ -162,8 +162,8 @@ class ContactForm extends React.Component {
             </section>
           </form>
         ) : (
-          <div className="error-wrapper">
-            <p className="error">Your message has been sent!</p>
+          <div className="success-wrapper">
+            <p className="success">Your message has been sent!</p>
           </div>
         )}
 

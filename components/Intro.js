@@ -21,7 +21,7 @@ export default () => {
                 autoplay
                 allowFullScreen
                 isOpen={showVideo} 
-                videoId='h09z2N0MtuQ' 
+                videoId='guNNqEeu6gY' 
                 onClose={() => setShowVideo(false)} 
             />
             <div className="intro">
@@ -31,7 +31,7 @@ export default () => {
                     <Shape className="intro-shape-outer" color="#ffffff" width="383px" height="434px" />
                     <Shape className="intro-shape-inner" color="rgba(232, 242, 248, 0.6)" width="193px" height="218px" />
                     <Text className="title">Coordicide</Text>
-                    <Text className="subtitle">Removing the coordinator</Text>
+                    <Text className="subtitle">THE next step IN IOTA’s EVOLUTION</Text>
                 </div>
             </div>
             <Text className="subtitle">Our goal</Text>
