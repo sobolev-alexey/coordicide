@@ -120,9 +120,9 @@ export const Modularity = () => markdown`
 
 The potential of a truly modular DLT is often overlooked. Many assume that because DLTs are software they are inherently upgradeable. In practice, however, software that was not designed with modular foundations will begin to stagnate. Flexibility to upgrade in the future is critical to the long-term success of such rapidly advancing technology. 
 
-<img src="/static/modularity/hexagon-modularity.png"/>
+<img className="asset modularity" src="/static/modularity/hexagon-modularity.png"/>
 
-To give the IOTA protocol this flexibility, and enable it to serve a diverse set of use cases in the future, the Coordicide solution renews IOTA as a modular DLT We have developed several __modules__ that __remove the need for the Coordinator__ in IOTA’s consensus layer. 
+To give the IOTA protocol this flexibility, and enable it to serve a diverse set of use cases in the future, the Coordicide solution renews IOTA as a modular DLT. We have developed several __modules__ that __remove the need for the Coordinator__ in IOTA’s consensus layer. 
 
 These modules introduce several additional benefits, including:
 

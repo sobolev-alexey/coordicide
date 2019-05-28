@@ -31,7 +31,7 @@ const Menu = ({ onClick, router }) => (
             <a 
                 className="btn mini menu-link"
                 download
-                href="https://github.com/iotaledger/data-marketplace/raw/develop/Blueprint%20-%20Data%20Marketplace.pdf"
+                href="https://files.iota.org/papers/Coordicide_WP.pdf"
             >
                 Whitepaper
             </a>
