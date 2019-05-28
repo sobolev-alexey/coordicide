@@ -84,7 +84,7 @@ The goal of Coordicide is for the network to reach consensus without the Coordin
 
 Current DLT solutions can guarantee at most two of these three characteristics at the same time. This problem is known as the “<a href="https://github.com/ethereum/wiki/wiki/Sharding-FAQ">scalability trilemma</a>.”
 
-<img src="/static/Trilemma_none.png"/>
+<img src="/static/post-coordinator/trilemma.png"/>
 
 An example of the trilemma can be found in PoW-based blockchains like Bitcoin. These networks offer security and decentralization, but lack scalability:
 
@@ -108,6 +108,8 @@ The removal of the Coordinator alone is not sufficient for achieving decentraliz
 
 The goal of Coordicide is to solve the scalability trilemma by providing a decentralized, secure network while preserving a high transaction rate. At the core of the solution is a __voting mechanism__ through which nodes request the opinions of other nodes in order to decide which transactions should be included in the Tangle, and which should be <a data-tip data-for='orphan'>orphaned</a>.
 
+<img src="/static/post-coordinator/module_5.gif"/>
+
 To remove the Coordinator, a number of challenges must be solved. Due to the complexity of the solution, Coordicide is broken down into different components. This approach makes our Coordicide proposal __modular__, meaning that each module can be independently replaced should new research reveal further improvements.
 
 Our aim is to make IOTA the gold standard: enterprise-ready DLT, working together with <a href="https://blog.iota.org/iota-becomes-a-founding-member-of-new-international-association-of-trusted-blockchain-applications-b0c6417aaded">key organisations</a> and <a href="https://www.omg.org/cgi-bin/doc?omg/2019-03-03">standards bodies</a>, using <a href="https://projects.eclipse.org/proposals/eclipse-iota-trinity">open source governance</a>.
@@ -117,6 +119,8 @@ Our aim is to make IOTA the gold standard: enterprise-ready DLT, working togethe
 export const Modularity = () => markdown`
 
 The potential of a truly modular DLT is often overlooked. Many assume that because DLTs are software they are inherently upgradeable. In practice, however, software that was not designed with modular foundations will begin to stagnate. Flexibility to upgrade in the future is critical to the long-term success of such rapidly advancing technology. 
+
+<img src="/static/modularity/hexagon-modularity.png"/>
 
 To give the IOTA protocol this flexibility, and enable it to serve a diverse set of use cases in the future, the Coordicide solution renews IOTA as a modular DLT We have developed several __modules__ that __remove the need for the Coordinator__ in IOTA’s consensus layer. 
 
@@ -128,8 +132,6 @@ These modules introduce several additional benefits, including:
 * <a data-tip data-for='message_overhead'>Message overhead</a> reduction
 
 The core Coordicide module is an improved consensus mechanism: a voting scheme that complements the tip selection algorithm to maximize decentralization and security. We have also devised a system of associating an identity with each node. Through auto-peering, this identity is used to build a small-world network and control the transaction rate. Nodes then vote to resolve conflicts by asking other nodes about their ledger status. 
-
-<img src="/static/hexagon-modularity.png"/>
 
 In the following sections, we discuss the two proposed (non-mutually exclusive) consensus implementations: __Cellular Consensus__ and <a href="https://arxiv.org/pdf/1905.10895.pdf">Fast Probabilistic Consensus</a>.
 
@@ -150,6 +152,8 @@ Let’s start by asking two fundamental questions:
 The answer is actually very simple. We want all honest nodes to maintain the same opinion about the state of the ledger. Or more simply, we want all honest nodes to agree which transactions are valid.
 * _Since IOTA does not have to choose a “leader” to mine blocks, what are we actually voting on?_  
 The answer is again relatively simple. If two transactions are conflicting, they lead to a split in the Tangle. To resolve the conflict, nodes vote on a preferred transaction (the non-preferred transaction becomes an orphan).
+
+<img src="/static/modules/the_modules.png"/>
 
 Traditional PoW-based DLT provides one set of answers to these questions, but these have significant drawbacks. PoW-based consensus in IOTA would introduce mining races and lead to increased power consumption and cost, thus limiting the network’s use in IoT. 
 
@@ -189,6 +193,8 @@ In peer-to-peer networks like IOTA, a node’s <a data-tip data-for='neighbors'>
 
 We introduce an auto-peering mechanism in which every node has its own criteria for selecting potential neighbors. An attacker cannot influence a node’s decisions in the peer selection process, and therefore a node’s particular “view” of the network is both local and unpredictable. This serves to protect against outside attacks (such as <a data-tip data-for='eclipse_attack'>eclipse attacks</a>) and makes it practically impossible for attackers to target certain nodes in the peering process, while ensuring nodes always have at least a certain amount of honest neighbors.
 
+<img src="/static/modules/auto_peering.gif"/>
+
 In addition, the auto-peering mechanism will try to create a <a data-tip data-for='small_world_network'>small-world network</a>, in which nodes can be reached from every other node through a small number of intermediate steps. This property further speeds up the time to reach consensus.
 
 `
@@ -218,6 +224,8 @@ The tip selection algorithm is the method by which transactions are selected for
 
 To attach a new transaction to the Tangle, the algorithm needs to select and approve two previous transactions — preferably <a data-tip data-for='tip'>tips</a>. This approval mechanism represents “belief” in the Tangle: If transaction y approves transaction x, this implies that y believes transaction x is valid and that its entire <a data-tip data-for='history'>history</a> is also valid.
 
+<img src="/static/modules/reliabale2.png"/>
+
 In the past, we have used a biased random walk as our tip selection algorithm, as this led not only to a healthy Tangle structure but also allowed us to identify the heaviest, and therefore preferred part of the Tangle. While this mechanism was essential for reaching consensus, it also showed properties that were less desirable:
 
 * Honest transactions could be left behind if they did not accumulate enough weight. This resulted in an increased need for <a data-tip data-for='promotion'>promotions</a> and <a data-tip data-for='reattachment'>reattachments</a> (even in the absence of attacks), which in turn significantly lowered the reliability of transactions.
@@ -228,6 +236,8 @@ By adding a voting layer to identify the preferred part of the tangle (as an add
 
 * Resolve conflicts much faster, and therefore lower the chance of a transaction accidentally attaching to the wrong part of the Tangle.
 * Use different tip selection mechanisms that are no longer based on cumulative weight, and have a lower chance of leaving valid transactions behind.
+
+<img src="/static/modules/reliabale1.png"/>
 
 This will increase the reliability of transactions in the IOTA network and significantly reduce the need for reattachments and promotions. It will also make the process of selecting tips much cheaper and faster.
 
