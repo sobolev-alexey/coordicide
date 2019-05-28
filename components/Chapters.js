@@ -66,36 +66,57 @@ export default ({ closeNav }) => {
                         <div className={classNames('subtopics', { 'enabled': showSubmenu })}>
                             <Link prefetch href="/module1">
                                 <div className="subtopic">
-                                    <Text className="title">01</Text>
+                                    <Text className="title">1</Text>
                                     <Text className="subtitle">Node identities and mana</Text>
                                     <Text className="read">Read</Text>
                                 </div>
                             </Link>
                             <Link prefetch href="/module2">
                                 <div className="subtopic">
-                                    <Text className="title">02</Text>
+                                    <Text className="title">2</Text>
                                     <Text className="subtitle">Secure Auto-peering</Text>
                                     <Text className="read">Read</Text>
                                 </div>
                             </Link>
                             <Link prefetch href="/module3">
                                 <div className="subtopic">
-                                    <Text className="title">03</Text>
+                                    <Text className="title">3</Text>
                                     <Text className="subtitle">Spam protection</Text>
                                     <Text className="read">Read</Text>
                                 </div>
                             </Link>
                             <Link prefetch href="/module4">
                                 <div className="subtopic">
-                                    <Text className="title">04</Text>
-                                    <Text className="subtitle">Secure Auto-peering</Text>
+                                    <Text className="title">4</Text>
+                                    <Text className="subtitle">Tip Selection Algorithm</Text>
                                     <Text className="read">Read</Text>
                                 </div>
                             </Link>
                             <Link prefetch href="/module5">
                                 <div className="subtopic">
-                                    <Text className="title">05</Text>
-                                    <Text className="subtitle">Spam protection</Text>
+                                    <Text className="title">5</Text>
+                                    <Text className="subtitle">Proactive conflict resolution</Text>
+                                    <Text className="read">Read</Text>
+                                </div>
+                            </Link>
+                            <Link prefetch href="/module5.1">
+                                <div className="subtopic">
+                                    <Text className="title">5.1</Text>
+                                    <Text className="subtitle">Shimmer</Text>
+                                    <Text className="read">Read</Text>
+                                </div>
+                            </Link>
+                            <Link prefetch href="/module5.1.1">
+                                <div className="subtopic">
+                                    <Text className="title">5.1.1</Text>
+                                    <Text className="subtitle">Cellular Consensus</Text>
+                                    <Text className="read">Read</Text>
+                                </div>
+                            </Link>
+                            <Link prefetch href="/module5.1.2">
+                                <div className="subtopic">
+                                    <Text className="title">5.1.2</Text>
+                                    <Text className="subtitle">Fast Probabilistic Consensus</Text>
                                     <Text className="read">Read</Text>
                                 </div>
                             </Link>
