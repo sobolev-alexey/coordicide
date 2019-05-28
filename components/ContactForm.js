@@ -96,7 +96,7 @@ class ContactForm extends React.Component {
                 <input
                   className="input"
                   type="text"
-                  placeholder="Elon Buffet *"
+                  placeholder="Name *"
                   value={name}
                   name="name"
                   onChange={this.handleInputChange}
@@ -104,7 +104,7 @@ class ContactForm extends React.Component {
                 <input
                   className="input"
                   type="email"
-                  placeholder="wen@email.com *"
+                  placeholder="Email *"
                   value={email}
                   name="email"
                   onChange={this.handleInputChange}
@@ -151,8 +151,7 @@ class ContactForm extends React.Component {
                   !loading && (
                     <Button
                       type="submit" 
-                      className="medium secondary" 
-                      icon="send"
+                      className="medium secondary centered" 
                       onClick={this.submit}
                     >
                       Submit
