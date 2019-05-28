@@ -4,7 +4,6 @@ import PreviousPage from '../components/PreviousPage'
 import NextPage from '../components/NextPage'
 import Text from '../components/Text'
 import Tooltip from '../components/Tooltip'
-import { Content } from '../components/Content'
 import * as graphic1 from '../static/modules/module1.json'
 
 import '../styles/content-page.scss'
