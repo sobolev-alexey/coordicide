@@ -3,7 +3,6 @@ import PreviousPage from '../components/PreviousPage'
 import NextPage from '../components/NextPage'
 import Text from '../components/Text'
 import Tooltip from '../components/Tooltip'
-import { Content } from '../components/Content'
 
 import '../styles/content-page.scss'
 

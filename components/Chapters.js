@@ -7,6 +7,7 @@ import '../styles/chapters.scss'
 
 export default ({ closeNav }) => {
     const [showSubmenu, setShowSubmenu] = useState(false)
+    const [background, setBackground] = useState(null)
 
     function hoverOn() {
         setShowSubmenu(true)
@@ -17,12 +18,16 @@ export default ({ closeNav }) => {
     }
 
     return (
-        <div className="chapters-outer-wrapper">
+        <div 
+            className={
+                classNames('chapters-outer-wrapper', { [background]: background })
+            }
+        >
             <div className="chapters-overlay">
                 <div className="close-nav" onClick={closeNav} />
                 <Text className="subtitle label">Chapter</Text>
                 <div className="chapters-wrapper">
-                    <Link prefetch href="/scalability">
+                    <Link prefetch href="/">
                         <div className="chapter intro">
                             <Text className="title">{' '}</Text>
                             <Text className="subtitle">Introduction</Text>
@@ -30,21 +35,21 @@ export default ({ closeNav }) => {
                         </div>
                     </Link>
                     <Link prefetch href="/scalability">
-                        <div className="chapter">
+                        <div className="chapter" onMouseEnter={() => setBackground('chapter1')}>
                             <Text className="title">01</Text>
                             <Text className="subtitle">IOTA as scalable DLT</Text>
                             <Text className="read">Read</Text>
                         </div>
                     </Link>
                     <Link prefetch href="/post-coordinator">
-                        <div className="chapter">
+                        <div className="chapter" onMouseEnter={() => setBackground('chapter2')}>
                             <Text className="title">02</Text>
                             <Text className="subtitle">IOTA POST-COORDINATOR</Text>
                             <Text className="read">Read</Text>
                         </div>
                     </Link>
                     <Link prefetch href="/modularity">
-                        <div className="chapter">
+                        <div className="chapter" onMouseEnter={() => setBackground('chapter3')}>
                             <Text className="title">03</Text>
                             <Text className="subtitle">Modularity</Text>
                             <Text className="read">Read</Text>
@@ -56,7 +61,7 @@ export default ({ closeNav }) => {
                         onMouseLeave={hoverOff}
                     >
                         <Link prefetch href="/modules">
-                            <div className="chapter">
+                            <div className="chapter" onMouseEnter={() => setBackground('chapter4')}>
                                 <Text className="title">04</Text>
                                 <Text className="subtitle">The Modules</Text>
                                 <Text className="read">Read</Text>
