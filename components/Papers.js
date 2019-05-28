@@ -13,9 +13,9 @@ export default () => (
             <a 
                 className="btn medium primary"
                 download
-                href="https://github.com/iotaledger/data-marketplace/raw/develop/Blueprint%20-%20Data%20Marketplace.pdf"
+                href="https://files.iota.org/papers/Coordicide_WP.pdf"
             >
-            <FontAwesomeIcon icon={faFileInvoice} />
+                <FontAwesomeIcon icon={faFileInvoice} />
                 Download
             </a>
             <Text className="micro with-dot">Updated 23 May 2019</Text>

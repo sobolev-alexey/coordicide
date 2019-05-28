@@ -17,7 +17,7 @@ export default () => {
             <div className="content">
                 <div className="_markdown_">
                     <p>To address the drawbacks of Cellular Consensus, we are simultaneously analyzing another voting process, for which we have already demonstrated mathematical models and proofs: the Fast Probabilistic Consensus.</p>
-                    <p>A formal description of Fast Probabilistic Consensus can be found in this <a href="https://iota.org/dummy_link_for_FPC_paper">article</a>. The basic principle is quite similar to Cellular Consensus, but rather than asynchronously casting votes between neighbors in parallel, the voting process is split into separate rounds. In each round every node selects a new random subset of other nodes, and queries their current opinions. A node’s opinion is then formed according to the majority of returned opinions. However, the notion of “majority” here fluctuates. Instead of using a fixed threshold of 50%, we use a decision threshold derived from a <a href="https://eprint.iacr.org/2016/228.pdf">decentralized random number</a> sequence. Selecting a global but unpredictable threshold allows us to defend against an attacker that wants to delay consensus.</p>
+                    <p>A formal description of Fast Probabilistic Consensus can be found in this <a href="https://arxiv.org/pdf/1905.10895.pdf">article</a>. The basic principle is quite similar to Cellular Consensus, but rather than asynchronously casting votes between neighbors in parallel, the voting process is split into separate rounds. In each round every node selects a new random subset of other nodes, and queries their current opinions. A node’s opinion is then formed according to the majority of returned opinions. However, the notion of “majority” here fluctuates. Instead of using a fixed threshold of 50%, we use a decision threshold derived from a <a href="https://eprint.iacr.org/2016/228.pdf">decentralized random number</a> sequence. Selecting a global but unpredictable threshold allows us to defend against an attacker that wants to delay consensus.</p>
                     <p>This voting process has the crucial property of converging very quickly, even in scenarios where malicious nodes are voting according to the worst possible strategy. This has been formally proven in the paper, but the general principle can be explained as follows:</p>
                     <ul>
                         <li>If an adversary knows the decision rules used by honest nodes, it can then predict their behaviour and adjust its strategy to stall the process indefinitely.</li>
@@ -30,7 +30,7 @@ export default () => {
             </div>
             <div className="content-footer">
                 <PreviousPage page="module5.1.1" title="Module 5.1.1" />
-                <NextPage page="future" title="Chapter 6" />
+                <NextPage page="future" title="Chapter 5" />
             </div>
 
             <Tooltip tooltipId='parasite_chain_attacks' />
