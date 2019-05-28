@@ -10,13 +10,12 @@ export default () => (
         <div className="benefits-heading-wrapper">
             <Shape className="benefits-shape" color="#ffffff" width="193px" height="226px" />
             <Text className="title extra-large">Benefits</Text>
-            <Text className="subtitle">of IOTA</Text>
         </div>
         <div className="key-topic-wrapper">
             <div className="key-topic">
                 <img src="../static/benefits/decentralized.png" />
                 <Text className="title">Decentralized & Permissionless</Text>
-                <Text>IOTA eliminates the need for miners and other centralized entities to reach consensus. It allows anybody to take part in the network in a completely trustless and permissionless way.</Text>
+                <Text>Unlike other DLTs, IOTA’s solution does not compromise decentralization in any way.</Text>
             </div>
             <div className="key-topic">
                 <img src="../static/benefits/finality.png" />
@@ -26,12 +25,12 @@ export default () => (
             <div className="key-topic">
                 <img src="../static/benefits/scalability.png" />
                 <Text className="title">Scalable & Lightweight</Text>
-                <Text>The absence of protocol related bottlenecks in combination with the ability of low-power devices to directly take part in the network enables the next industrial revolution - the Internet of Things.</Text>
+                <Text>Truly limitless scalability with no protocol-related bottlenecks. The network is limited only by hardware and the laws of physics.</Text>
             </div>
             <div className="key-topic">
                 <img src="../static/benefits/modular.png" />
                 <Text className="title">Modular & Future Proof</Text>
-                <Text>A completely modular design of the protocol enables layer-based extensions of the protocol and guarantees the ability to seamlessly adopt new findings from research in the field of DLT.</Text>
+                <Text>Much like the Internet Protocol, a layered approach enables extension of the base protocol through additional modules.</Text>
             </div>
             <div className="key-topic">
                 <img src="../static/benefits/feeless.png" />
