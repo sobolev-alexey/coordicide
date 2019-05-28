@@ -37,6 +37,10 @@
         text-align: center;
         z-index: 1000;
 
+        &.cookie-bar-bottom-bar {
+            bottom: 70px;
+        }
+
         .menu {
             width: 100%;
         }
@@ -47,7 +51,7 @@
         }
 
         p > a:hover {
-            color: $q-purple;
+            color: $q-teal;
         }
 
         p {

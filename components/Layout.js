@@ -8,6 +8,7 @@ import ExternalMenu from './ExternalMenu'
 import Shape from './Shape';
 import Menu from './Menu'
 import Chapters from './Chapters'
+import Disclaimer from './Disclaimer'
 import '../styles/layout.scss'
 
 export const MenuContext = React.createContext({});
@@ -69,7 +70,7 @@ export default ({ children, title = defaultTitle }) => {
 
                         { children }
 
-                        <footer>
+                        <footer className="footer" id="footer">
                             <img className="footer-iota-logo" src="/static/iota_logo.svg" />
 
                             <p>Coordicide</p>
@@ -84,6 +85,7 @@ export default ({ children, title = defaultTitle }) => {
                     </div>
                 )
             }
+            <Disclaimer />
         </MenuContext.Provider>
     )
 }
