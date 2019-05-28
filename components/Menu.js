@@ -1,10 +1,11 @@
 import Link from 'next/link'
+import { withRouter } from 'next/router'
 import React from 'react'
 import Button from './Button'
 
 import '../styles/menu.scss'
 
-export default ({ onClick }) => (
+const Menu = ({ onClick, router }) => (
     <div className="menu">
         <div className="menu-logo">
             <Link prefetch href="/">
@@ -13,11 +14,15 @@ export default ({ onClick }) => (
         </div>
 
         <div className="menu-links">
-            <Link prefetch href="/">
-                <a className="menu-link intro">
-                    Introduction
-                </a>
-            </Link>
+            {
+                router.pathname !== '/' ? (
+                    <Link prefetch href="/">
+                        <a className="menu-link intro">
+                            Introduction
+                        </a>
+                    </Link>
+                ) : null
+            }
             <Link prefetch href="/">
                 <a className="menu-link-mobile intro">
                     Intro
@@ -40,3 +45,5 @@ export default ({ onClick }) => (
         </div>
     </div>
 )
+
+export default withRouter(Menu)
