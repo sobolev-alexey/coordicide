@@ -84,7 +84,7 @@ The goal of Coordicide is for the network to reach consensus without the Coordin
 
 Current DLT solutions can guarantee at most two of these three characteristics at the same time. This problem is known as the “<a href="https://github.com/ethereum/wiki/wiki/Sharding-FAQ">scalability trilemma</a>.”
 
-<img src="/static/post-coordinator/trilemma.png"/>
+<img src="/static/post-coordinator/trilemma.gif"/>
 
 An example of the trilemma can be found in PoW-based blockchains like Bitcoin. These networks offer security and decentralization, but lack scalability:
 
@@ -221,6 +221,8 @@ We enforce a maximum transaction rate per node to further prevent spam. This sys
 export const Module4 = () => markdown`
 
 The tip selection algorithm is the method by which transactions are selected for approval. A good algorithm allows the Tangle to grow in a stable and secure way.
+
+<img src="/static/modules/tangle.gif"/>
 
 To attach a new transaction to the Tangle, the algorithm needs to select and approve two previous transactions — preferably <a data-tip data-for='tip'>tips</a>. This approval mechanism represents “belief” in the Tangle: If transaction y approves transaction x, this implies that y believes transaction x is valid and that its entire <a data-tip data-for='history'>history</a> is also valid.
 
