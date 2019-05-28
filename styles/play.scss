@@ -1,6 +1,11 @@
 .play-button-wrapper {
     position: absolute;
     z-index: -1;
+
+    @media (max-width: 768px) {
+        z-index: 100;
+        top: 375px;
+    }
 }
 
 @keyframes shadow-pulse {

@@ -16,10 +16,16 @@
         font-size: 14px;
         letter-spacing: 0.25em;
         color: #727E97;
+        text-align: left;
+    }
+
+    .title {
+        text-align: left;
     }
 
     @media (max-width: 768px) {
-        padding-top: 50px;
+        padding: 50px 0 20px;
+        margin: 0 20px;
     }
 }
 
@@ -29,6 +35,12 @@
     z-index: 2;
     max-width: 580px;
     width: 100%;
+    margin: auto;
+
+    @media (max-width: 768px) {
+        width: auto;
+        margin: 0 20px;
+    }
     
     ._markdown_ {
         display: flex;
@@ -47,7 +59,7 @@
         animation-fill-mode: backwards;
     }
 
-    p, ul, li {
+    p, ul, ol, li {
         font-size: 16px;
         font-weight: 400;
         line-height: 32px;
@@ -57,9 +69,11 @@
         max-width: 580px;
         width: 100%;
         -webkit-font-smoothing: antialiased;
+        word-wrap: break-word;
         
         a {
             color: #2CCFD0;
+            word-wrap: break-word;
         }
 
         a:hover {
@@ -67,12 +81,28 @@
         }
     }
 
+    code {
+        font-family: monospace;
+        word-wrap: break-word;
+        color: $text-main;
+        background: rgba(114, 126, 151, 0.1);
+        border-radius: 10px;
+        padding: 20px;
+    }
+
     ul {
         padding-left: 30px; 
+        width: unset;
+    }
+
+    ol {
+        padding-left: 20px;
+        width: unset;
     }
 
     li {
         padding: 10px 0;
+        word-wrap: break-word;
     }
 
     img {
@@ -88,31 +118,30 @@
     }
 
     h1 {
+        letter-spacing: 1.4px;
         font-size: 3em;
-        margin-left: -30px;
-        margin-bottom: 20px;
-        letter-spacing: 2px;
-        font-weight: 700;
-        display: inline-block;
-        -webkit-text-fill-color: transparent;
-        background: linear-gradient(90deg, $q-teal -5.83%, $q-purple 106.9%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        animation: slide-right 0.6s, fade-in 1.2s;
+        font-weight: 600;
+        -webkit-font-smoothing: antialiased;
+        margin: 50px 0 30px;
+        word-wrap: break-word;
     }
 
     h2 {
         letter-spacing: 1.4px;
-        text-transform: uppercase;
-        font-size: 1.6em;
+        font-size: 2em;
         font-weight: 600;
         -webkit-font-smoothing: antialiased;
+        margin: 50px 0 30px;
+        word-wrap: break-word;
     }
 
     h3 {
-        font-size: 1.4em;
+        letter-spacing: 1.4px;
+        font-size: 1.6em;
         font-weight: 600;
+        margin: 50px 0 30px;
         -webkit-font-smoothing: antialiased;
+        word-wrap: break-word;
     }
 
     .glossary-header {

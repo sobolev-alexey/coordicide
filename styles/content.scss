@@ -86,7 +86,7 @@
             }
 
             .play-button-wrapper {
-                z-index: 7;
+                z-index: 8;
             }
 
             .animated-text {
@@ -189,12 +189,11 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
-        align-items: center;
     
         .key-topic {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             width: 100%;
             max-width: 400px;
@@ -277,6 +276,10 @@
             font-size: 14px;
             margin-top: 0;
         }
+
+        @media (max-width: 768px) {
+            width: auto;
+        }
     }
 }
 
@@ -347,6 +350,74 @@
     
         @media (max-width: 768px) {
             display: none;
+        }
+    }
+}
+
+.conclusion-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .conclusion-footer {
+        max-width: 580px;
+        margin: 40px auto;
+    }
+
+    .conclusion-topic-group-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+
+        &:nth-child(even) {
+            background: #EBFFFE;
+        }
+
+        .conclusion-topic-wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            margin: 40px 0;
+            max-width: 580px;
+            padding: 0 20px;
+
+            img {
+                width: 60px;
+                margin-right: 20px;
+            }
+
+            .conclusion-content-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                position: relative;
+
+                .text {
+                    text-align: left;
+                    margin: 0px 0 40px;
+                }
+
+                a {
+                    color: #2CCFD0;
+
+                    &:hover {
+                        border-bottom: 1px solid #2CCFD0;
+                    }
+                }
+            }
+
+            &:first-child {
+                .conclusion-content-wrapper:after {
+                    content: "";
+                    background: #2CCFD0;
+                    position: absolute;
+                    left: 0;
+                    height: 2px;
+                    width: 50px;
+                    bottom: -20px;
+                }
+            }
         }
     }
 }

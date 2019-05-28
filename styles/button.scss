@@ -19,14 +19,15 @@
         width: 310px;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
+        position: relative;
 
         @media (max-width: 768px) {
-            font-size: 22px;
+            font-size: 18px;
             margin: 10px 20px;
             width: 300px;
             line-height: 22px;
-            padding: 20px;
+            padding: 20px 12px;
         }
 
         @media (max-width: 580px) {
@@ -36,6 +37,11 @@
             line-height: 16px;
             padding: 15px;
         }
+
+        svg {
+            position: absolute;
+            left: 25px;
+        }
     }
 
     &.medium {
@@ -43,7 +49,7 @@
         font-weight: 600;
         line-height: 13px;
         border-radius: 15px;
-        padding: 15px; //17px 15px 13px;
+        padding: 15px;
         width: 150px;
     
         & > svg {
@@ -91,5 +97,17 @@
             color: $gray;
             border: 1.25px solid $gray;
         }
+    }
+
+    &.intro-page {
+        svg {
+            display: none;
+        }
+    }
+
+    &.centered {
+        position: relative;
+        text-align: center;
+        line-height: unset;
     }
 }
