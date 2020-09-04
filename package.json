@@ -43,7 +43,7 @@
         "next": "^8.1.0",
         "next-fonts": "^0.17.0",
         "next-images": "^1.1.1",
-        "node-sass": "^4.11.0",
+        "node-sass": "^4.13.1",
         "react": "^16.8.6",
         "react-cookie": "^4.0.0",
         "react-dom": "^16.8.6",
