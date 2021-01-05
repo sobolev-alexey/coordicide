@@ -36,7 +36,7 @@
         "@fortawesome/pro-solid-svg-icons": "^5.8.2",
         "@fortawesome/react-fontawesome": "^0.1.4",
         "@zeit/next-sass": "^1.0.1",
-        "axios": "^0.18.0",
+        "axios": "^0.21.1",
         "bootstrap": "^4.3.1",
         "classnames": "^2.2.6",
         "markdown-in-js": "^1.1.4",
