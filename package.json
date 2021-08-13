@@ -40,7 +40,7 @@
         "bootstrap": "^4.3.1",
         "classnames": "^2.2.6",
         "markdown-in-js": "^1.1.4",
-        "next": "^8.1.0",
+        "next": "^11.1.0",
         "next-fonts": "^0.17.0",
         "next-images": "^1.1.1",
         "node-sass": "^4.11.0",
